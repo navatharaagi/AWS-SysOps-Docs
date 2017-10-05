@@ -13,16 +13,16 @@ PV AMIs (Paravirtual):
 #### 1.Understanding AWS Instance Types, Utilization, and Performance
 Instance Types – General Purpose
 
-T2 instances
+T2 instances:
 - Intended for work loads that do not use the full CPU often or consistently
 - Provide Burstable Performance
 - EBS-only storage
 
-M3 instances
+M3 instances:
 - Provide a balance of compute, memory, and network resources
 - SSD Storage (Instance store)
 
-M4 instances
+M4 instances:
 - Provide a balance of compute, memory, and network resources
 - Support Enhanced Networking
 - EBS-optimized
@@ -42,14 +42,18 @@ C4 instances
 - EBS-optimized
 
 Instance Types – Memory Optimized
--Lowest price per amount (GiB of RAM) and memory performance
--R3 instances
-    SSD-backed instance storage
-    High memory capacity
-    Support for Enhanced Networking
+
+- Lowest price per amount (GiB of RAM) and memory performance
+
+R3 instances
+- SSD-backed instance storage
+- High memory capacity
+- Support for Enhanced Networking
+
 Instance Types – GPU
--Graphics and general purpose GPU compute
--G2 instances
+
+- Graphics and general purpose GPU compute
+- G2 instances
     High frequency processors
     High-performance NVIDIA GPUs
     On-board hardware video encoder
