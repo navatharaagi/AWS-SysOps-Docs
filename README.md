@@ -17,23 +17,28 @@ T2 instances
 - Intended for work loads that do not use the full CPU often or consistently
 - Provide Burstable Performance
 - EBS-only storage
+
 M3 instances
 - Provide a balance of compute, memory, and network resources
 - SSD Storage (Instance store)
+
 M4 instances
 - Provide a balance of compute, memory, and network resources
 - Support Enhanced Networking
 - EBS-optimized
+
 Instance Types – Compute Optimized
--Lowest price/compute performance in EC2
--C3 instances
-    SSD-backed instance storage
-    Support for Enhanced Networking and Clustering
--C4 instances
-    Latest generation of Compute-optimized instances
-    Highest performing processors (optimized specifically for EC2)
-    Support for Enhanced Networking and Clustering
-    EBS-optimized
+
+- Lowest price/compute performance in EC2
+C3 instances
+- SSD-backed instance storage
+- Support for Enhanced Networking and Clustering
+C4 instances
+- Latest generation of Compute-optimized instances
+- Highest performing processors (optimized specifically for EC2)
+- Support for Enhanced Networking and Clustering
+- EBS-optimized
+
 Instance Types – Memory Optimized
 -Lowest price per amount (GiB of RAM) and memory performance
 -R3 instances
