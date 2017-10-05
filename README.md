@@ -66,11 +66,12 @@ Instance Types – Storage Optimized
 
 - Very fast SSD-backed instance storage optimized for high random I/O performance and high IOPS (I/O operations per second)
 - I2 instances
-    High I/O performance (including high random performance)
-    High frequency processors
-    SSD storage
-    Supports TRIM
-    Supports Enhanced Networking
+  - High I/O performance (including high random performance)
+  - High frequency processors
+  - SSD storage
+  - Supports TRIM
+  - Supports Enhanced Networking
+  
 Instance Types – Burstable Performance
 -CPU Credits are used to “burst” past the baseline performance up to 100% of a  CPU core
 
