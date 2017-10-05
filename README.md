@@ -12,17 +12,17 @@ PV AMIs (Paravirtual):
 #### Demonstrate Ability to Monitor Availability and Performance
 #### 1.Understanding AWS Instance Types, Utilization, and Performance
 Instance Types – General Purpose
--T2 instances
-    Intended for work loads that do not use the full CPU often or consistently
-    Provide Burstable Performance
-    EBS-only storage
--M3 instances
-    Provide a balance of compute, memory, and network resources
-    SSD Storage (Instance store)
--M4 instances
-    Provide a balance of compute, memory, and network resources
-    Support Enhanced Networking
-    EBS-optimized
+T2 instances
+- Intended for work loads that do not use the full CPU often or consistently
+- Provide Burstable Performance
+- EBS-only storage
+M3 instances
+- Provide a balance of compute, memory, and network resources
+- SSD Storage (Instance store)
+M4 instances
+- Provide a balance of compute, memory, and network resources
+- Support Enhanced Networking
+- EBS-optimized
 Instance Types – Compute Optimized
 -Lowest price/compute performance in EC2
 -C3 instances
