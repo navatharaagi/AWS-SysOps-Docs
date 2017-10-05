@@ -10,4 +10,4 @@ PV AMIs (Paravirtual):
 - Historically faster than HVM, but no longer the case
 
 #### Demonstrate Ability to Monitor Availability and Performance
-####1.Understanding AWS Instance Types, Utilization, and Performance
+#### 1.Understanding AWS Instance Types, Utilization, and Performance
