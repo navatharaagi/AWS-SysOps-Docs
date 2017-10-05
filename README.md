@@ -30,9 +30,11 @@ M4 instances
 Instance Types – Compute Optimized
 
 - Lowest price/compute performance in EC2
+
 C3 instances
 - SSD-backed instance storage
 - Support for Enhanced Networking and Clustering
+
 C4 instances
 - Latest generation of Compute-optimized instances
 - Highest performing processors (optimized specifically for EC2)
