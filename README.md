@@ -61,9 +61,11 @@ G2 instances
 - Low-latency frame capture and encoding, enabling interactive streaming
 - Useful for GPU compute workloads, machine learning, video encoding, 3D   
 application streaming, etc…
+
 Instance Types – Storage Optimized
--Very fast SSD-backed instance storage optimized for high random I/O performance and high IOPS (I/O operations per second)
--I2 instances
+
+- Very fast SSD-backed instance storage optimized for high random I/O performance and high IOPS (I/O operations per second)
+- I2 instances
     High I/O performance (including high random performance)
     High frequency processors
     SSD storage
