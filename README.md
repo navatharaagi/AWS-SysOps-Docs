@@ -1,6 +1,6 @@
 # AWS-SysOps-Docs
 ### Monitoring & Metrics
-### Virtualization Types
+#### Virtualization Types
 HVM AMIs (Hardware virtual machine):
 - Can use special hardware extensions
 - Can use PV drivers for network and storage
