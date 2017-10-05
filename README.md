@@ -52,8 +52,8 @@ R3 instances
 
 Instance Types – GPU
 
-- Graphics and general purpose GPU compute
-- G2 instances
+Graphics and general purpose GPU compute
+G2 instances
     High frequency processors
     High-performance NVIDIA GPUs
     On-board hardware video encoder
