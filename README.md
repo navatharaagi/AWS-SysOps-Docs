@@ -64,7 +64,7 @@ Instance Types – Storage Optimized
 Instance Types – Burstable Performance
 - CPU Credits are used to “burst” past the baseline performance up to 100% of a  CPU core
 
-####2.EC2 Instance & System Status Checks
+#### 2.EC2 Instance & System Status Checks
 - System Status Checks
   - Loss of network connectivity
   - Loss of system power
