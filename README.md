@@ -53,13 +53,14 @@ R3 instances
 Instance Types – GPU
 
 Graphics and general purpose GPU compute
+
 G2 instances
-    High frequency processors
-    High-performance NVIDIA GPUs
-    On-board hardware video encoder
-    Low-latency frame capture and encoding, enabling interactive streaming
-    Useful for GPU compute workloads, machine learning, video encoding, 3D   
-    application streaming, etc…
+- High frequency processors
+- High-performance NVIDIA GPUs
+- On-board hardware video encoder
+- Low-latency frame capture and encoding, enabling interactive streaming
+- Useful for GPU compute workloads, machine learning, video encoding, 3D   
+application streaming, etc…
 Instance Types – Storage Optimized
 -Very fast SSD-backed instance storage optimized for high random I/O performance and high IOPS (I/O operations per second)
 -I2 instances
