@@ -12,6 +12,7 @@ PV AMIs (Paravirtual):
 #### Demonstrate Ability to Monitor Availability and Performance
 #### 1.Understanding AWS Instance Types, Utilization, and Performance
 Instance Types – General Purpose
+
 T2 instances
 - Intended for work loads that do not use the full CPU often or consistently
 - Provide Burstable Performance
