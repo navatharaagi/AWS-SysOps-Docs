@@ -85,3 +85,5 @@ Instance Types – Burstable Performance
   - Solve what is causing the issue
   - Stop and start instances
   - Terminate and re-launch instances with more memory, a different kernel, or different networking configuration
+
+  
