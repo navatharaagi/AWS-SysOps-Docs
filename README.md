@@ -142,31 +142,26 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
   - Two different types of SSD volumes: io1 and gp2
   - gp2 – General Purpose (default)
 
-7.Monitoring RDS for Performance and Availability
-Amazon RDS – Monitoring Metrics
--CPUUtilization
-    Percentage of CPU utilization
--DatabaseConnections
-    Number of connections that we have at a given point in time
--DiskQueueDepth
-    Number of read/write requests waiting to access the disk
--FreeableMemory
-    Amount of available RAM
--FreeStorageSpace
-    Amount of available storage space
--SwapUsage
-    When data is stored in memory on disk
-    Increase in this usually has to do with running out of available RAM
--ReadIOPS/WriteIOPS
-    IOPS represent the number of I/O operations completed per second
-    If we don’t have enough IOPS, performance will slow down
--ReadLatency/WriteLatency
-    Average amount of time taken per disk I/O operation (input/output)
-    Higher latency can be solved with more IOPS
--ReadThroughput/WriteThroughput  
-    Average number of bytes read or written to or from disk per second
+#### 7.Monitoring RDS for Performance and Availability
+- Amazon RDS – Monitoring Metrics
+  - CPUUtilization : Percentage of CPU utilization
+  - DatabaseConnections : Number of connections that we have at a given point in time
+  - DiskQueueDepth : Number of read/write requests waiting to access the disk
+  - FreeableMemory : Amount of available RAM
+  - FreeStorageSpace : Amount of available storage space
+  - SwapUsage :
+    - When data is stored in memory on disk
+    - Increase in this usually has to do with running out of available RAM
+  - ReadIOPS/WriteIOPS:
+    - IOPS represent the number of I/O operations completed per second
+    - If we don’t have enough IOPS, performance will slow down
+  - ReadLatency/WriteLatency
+    - Average amount of time taken per disk I/O operation (input/output)
+    - Higher latency can be solved with more IOPS
+  - ReadThroughput/WriteThroughput  
+    - Average number of bytes read or written to or from disk per second
 
-8.Monitoring ElastiCache for Performance and Availability
+#### 8.Monitoring ElastiCache for Performance and Availability
 Monitoring ElastiCache
 -ElastiCache supports two engines:
     Memcached
