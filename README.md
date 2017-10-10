@@ -295,7 +295,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 #### 1.DEMONSTRATE YOUR ABILITY TO ENSURE LEVELS OF FAULT TOLERANCE BASED ON BUSINESS NEEDS
 - Quiz:
 1. We currently have one `Bastion` host instance in one of our public subnets, but we're worried about availability if the bastion host or the availability zone that it's in goes down. What can we do?
-- Set up two Bastion hosts in two `separate Availability Zones` and assign an Elastic IP Address to the main Bastion host.
+- Set up two Bastion hosts in two `separate Availability Zones` and assign an `Elastic IP` Address to the main Bastion host.
 2. What is the best practice to setup and implement a Bastion host in a VPC?
 - Create the instance in your public subnet and assign it a public IP address. Then, use ssh-agent forwarding or OpenSSH ProxyCommand to connect to your private instances.
 3. Which of these services give us access to the underlying Operating System?
