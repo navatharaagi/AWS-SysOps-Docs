@@ -336,7 +336,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2@..]$sudo fio --filename=/dev/xvdf --rw=randread --bs=128k --iodepth=32 --ioengine=libaio --direct=1 --name=volume-initialize
 ```
 
-3.Pre-warming The Elastic Load Balancer
+#### 3.Pre-warming The Elastic Load Balancer
 -Pre-warming means configuring the elastic load balancer to have enough capacity to handle whatever traffic/demand there is going to be.
 -HTTP 503 Error (ELB cannot handle anymore requests)
     Does not queue requests but instead drops them
