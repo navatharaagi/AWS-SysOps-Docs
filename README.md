@@ -285,7 +285,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 4. In order to monitor operating system-level metrics such as disk usage, swap usage, and memory usage, you must install EC2 monitoring scripts. These scripts put custom metric data into Amazon CloudWatch. What do you need to do in order to give the "instance permissions" to put those custom metrics in CloudWatch?
 - Assign a `role` to the EC2 instance which will be sending custom metrics to CloudWatch.
 
-#### High Availability
+### High Availability
 #### Implement Scalability and Elasticity Based on Scenario
 #### 1.Scalability and Elasticity Essentials
 #### 2.Determining Reserved Instance Purchases Based on Business NEEDS
