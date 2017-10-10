@@ -303,7 +303,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 4. What are conditions that can trigger an Amazon `RDS failover` to happen?
 - Loss of `network` connectivity to the primary instance, `Storage` failure on the primary database, Some kind of `resource` failure with the underlying virtual resources.
 
-Analysis:
+#### Analysis:
 Optimize the Environment to Ensure Maximum Performance
 1.Offloading Database Workload
 -Read replicas used for offload work from main DB. Writes goes to “Source Instance” ,Reads goes to “Read Replicas"
