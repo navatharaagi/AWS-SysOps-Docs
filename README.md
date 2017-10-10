@@ -337,7 +337,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 ```
 
 #### 3.Pre-warming The Elastic Load Balancer
--Pre-warming means configuring the elastic load balancer to have enough capacity to handle whatever traffic/demand there is going to be.
+- `Pre-warming` means configuring the elastic load balancer to have enough capacity to handle whatever traffic/demand there is going to be.
 -HTTP 503 Error (ELB cannot handle anymore requests)
     Does not queue requests but instead drops them
 -ELB is designed to increase its resource capacity with gradual increases in traffic
