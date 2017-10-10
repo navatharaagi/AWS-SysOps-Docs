@@ -252,10 +252,10 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
   - Save costs by purchasing reserved instances
   - Reserve instances for 1 to 3 years at a discounted rate
   - Some instances can be sold for a fee
-Low Utilization
--Save costs by minimizing the number of EC2 instances in-use
--Set CloudWatch alarms to spin down underutilized instances
--Find the right balance between availability and cost
+- Low Utilization
+  - Save costs by minimizing the number of EC2 instances in-use
+  - Set CloudWatch alarms to spin down underutilized instances
+  - Find the right balance between availability and cost
 Idle Load Balancers
 -Remove unused load balancers since we pay per load balancer
 Amazon EBS Volumes
