@@ -327,7 +327,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - EC2—>Snapshots—>create a snapshot—>select created snapshot—>Right click —>Create Volume with Volume Type “General Purpose SSD” & select Availability zone same as creating EC2 instance.
 - EC2—>Volumes—>Volume must be created in same availability zone as EC2 instance
 - EC2—>launch an Amazon linux instance with SG - SSH & existing essential key pair “EBS volume” in same availability zone as in Volume.
-- EC2—>Volumes—>Select created Volume—>Right click —> Attach —> select running instance.
+- EC2—>Volumes—>Select created Volume—>Right click—>Attach—>select running instance.
 EC2—> Instances —> connect —> ssh into ec2 instance by going to CLI.
 [ec2@..]$lsblk      /* shows all of the different volumes where they are mounted.as of
                                 now there will be no outpoint
