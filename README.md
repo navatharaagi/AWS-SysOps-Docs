@@ -119,16 +119,16 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - We can create Alarm for any Metrics by just selecting the instance-id of a desired metric name.
 
 #### 5.Dedicating an Instance to Monitoring
-NAT instance: It allows our instances,subnets to download updates without having to make them public.Ideal for security purposes.
-To monitor NAT instance & swapped if its not working,this can be done by PING.
--Launch two instances “NAT” & “Monitoring” in “Custom VPC” not in Default VPC by creating a “Public subnet”, put these two instances in that Public Subnet.
--By using Connect option ssh into “Monitoring” instance which have Public IP
--Both instances will have different Security Groups but same VPC & Subnet
--we have to monitor NAT instance here by using Pinging method
-
--Now goto CLI, where “Monitoring” ssh has done & connected to its EC2 instance
-[ec2……]$ping  [paste private-ip of NAT instance]   /*it will not work because of SG
-                                                                             which inbound rules has only SSH
+- NAT instance: It allows our instances,subnets to download updates without having to make them public.Ideal for security purposes.
+- To monitor NAT instance & swapped if its not working,this can be done by PING.
+- Launch two instances “NAT” & “Monitoring” in “Custom VPC” not in Default VPC by creating a “Public subnet”, put these two instances in that Public Subnet.
+- By using Connect option ssh into “Monitoring” instance which have Public IP
+- Both instances will have different Security Groups but same VPC & Subnet
+- we have to monitor NAT instance here by using Pinging method
+- Now goto CLI, where “Monitoring” ssh has done & connected to its EC2 instance
+```ssh
+[ec2……]$ping  [paste private-ip of NAT instance] /*it will not work because of SG which inbound rules has only SSH
+```
 Now goto EC2 dashboard - Security Groups - select the “Monitoring” Instance SG & Copy its "Group-Id" from description.
 Now goto NAT instance - Security Group -Edit inbound rules by allowing “All ICMP” traffic  - Source “custom IP - paste the copied SG-id” - save
 Now goto CLI, do ping again
