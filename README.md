@@ -300,5 +300,5 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Create the instance in your `public subnet` and assign it a `public IP` address. Then, use `ssh-agent` forwarding or `OpenSSH ProxyCommand` to connect to your private instances.
 3. Which of these `services` give us access to the underlying `Operating System`?
 - Amazon EMR, EC2
-4. What are conditions that can trigger an Amazon RDS failover to happen?
+4. What are conditions that can trigger an Amazon `RDS failover` to happen?
 - Loss of network connectivity to the primary instance, Storage failure on the primary database, Some kind of resource failure with the underlying virtual resources.
