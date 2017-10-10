@@ -272,7 +272,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Idle Amazon RDS DB Instances
   - Take snapshots of unused DB instances, and delete them
 
-4.Using the AWS Price List API and Cost Explorer
+#### 4.Using the AWS Price List API and Cost Explorer
 AWS Billing Dashboard - Cost Explorer - Launch Cost Explorer
 
 Quiz
