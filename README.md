@@ -298,7 +298,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Set up two Bastion hosts in two `separate Availability Zones` and assign an `Elastic IP` Address to the `main Bastion` host.
 2. What is the best practice to setup and implement a Bastion host in a `VPC`?
 - Create the instance in your `public subnet` and assign it a `public IP` address. Then, use `ssh-agent` forwarding or `OpenSSH ProxyCommand` to connect to your private instances.
-3. Which of these `services` give us access to the underlying Operating System?
+3. Which of these `services` give us access to the underlying `Operating System`?
 - Amazon EMR, EC2
 4. What are conditions that can trigger an Amazon RDS failover to happen?
 - Loss of network connectivity to the primary instance, Storage failure on the primary database, Some kind of resource failure with the underlying virtual resources.
