@@ -315,13 +315,13 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - To Promote Read Replica instance to a "Stand-alone Instance”.
 - Select Read Replica instance—>Right click—>Promote Read Replica—>Enable automative backups & retention period—>continue—>promote read replica.
 - After this,DB is now being promoted to stand alone instance, which we could use for another application to read & write data.Once this is done, we can enable `Multi-AZ failover` for this DB since it is now Stand alone DB not a read replica anymore.
-AWS RDS Read Replication vs. Multi-AZ failover deployments
--Read replicas are built primarily for performance and offloading work
--Multi-AZ deployments are used for high availability and durability
--Multi-AZ deployments give us synchronous replication instead of asynchronous
--Multi-AZ deployments are only used to perform a failover, they are idle the rest of the time
--Read replicas are used to serve legitimate traffic
--It is often beneficial to use both of these as complements
+#### AWS RDS Read Replication vs. Multi-AZ failover deployments
+- Read replicas are built primarily for performance and offloading work
+- Multi-AZ deployments are used for high availability and durability
+- Multi-AZ deployments give us synchronous replication instead of asynchronous
+- Multi-AZ deployments are only used to perform a failover, they are idle the rest of the time
+- Read replicas are used to serve legitimate traffic
+- It is often beneficial to use both of these as complements
 
 2.Initializing (Pre-warming) EBS Volumes
 EC2 —> Snapshots —>  create a snapshot —> select created snapshot —> Right click —> Create Volume with Volume Type “General Purpose SSD” & select Availability zone same as creating EC2 instance.
