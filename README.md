@@ -338,14 +338,14 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 
 #### 3.Pre-warming The Elastic Load Balancer
 - `Pre-warming` means configuring the elastic load balancer to have enough capacity to handle whatever traffic/demand there is going to be.
--HTTP 503 Error (ELB cannot handle anymore requests)
-    Does not queue requests but instead drops them
--ELB is designed to increase its resource capacity with gradual increases in traffic
--When expecting significant spikes in traffic it is possible the traffic is sent faster than the ELB can “expand”
-    Contact AWS for “pre-warming” of the ELB
--To know what capacity our load balancer can handle, one way is to find out is to use “Load Testing” tools.
+- HTTP 503 Error (ELB cannot handle anymore requests)
+  - Does not queue requests but instead drops them
+- ELB is designed to increase its resource capacity with gradual increases in traffic
+- When expecting significant spikes in traffic it is possible the traffic is sent faster than the ELB can “expand”
+  - Contact AWS for “pre-warming” of the ELB
+- To know what capacity our load balancer can handle, one way is to find out is to use “Load Testing” tools.
 
-Quiz:
+- Quiz:
 Q.One of your customers needs business analytics from data stored in your Amazon RDS database. The problem is, this database is also used to serve data to other customers. The business analytics queries require a lot of table joins and expensive calculations that can't be offloaded to the client, and so you're worried about degrading performance. What can you do?
 -Create a read replica specifically for this customer and their business analytics queries. Give them the replica's endpoint.
 Q.We’re restoring a volume from a snapshot and we need maximum performance as soon as we put the volume in production. How can we ensure maximum performance?
