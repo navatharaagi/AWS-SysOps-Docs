@@ -171,35 +171,35 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
     2. Evictions
     3. CurrConnections
     4. Swap Usage (Memcached)
-1.Monitoring ElastiCache – CPU Utilization
-CPU host-level metrics
-    Memcached is multi-threaded
-    Redis is single-threaded
-Memcached
--Can handle loads of up to 90%
--Above 90% becomes a problem
--Solution: Increase the size of the node or scale out by adding more nodes
-Redis
--Calculate the threshold: (90 / # of CPU cores)
--Solution:
--For read-heavy workloads, increase the number of read replicas
--For write-heavy workloads, use a larger cache instance
-2.Monitoring ElastiCache – Evictions
-Evictions happen when a new item is added but there is no more memory space. An older item must be deleted to make space.
--Memcached solution : Increase instance size or add nodes to your cluster
--Redis solution : Increase the node size
-3.Monitoring ElastiCache – Current Connections
-An increase in CurrConnections could indicate a larger problem with your application
--The application may not be releasing connections
--Choose a threshold based off of your application requirements
-4.Monitoring ElastiCache – Swap usage
-Monitor swap usage for Memcached. Swap could be caused because the memory allocated for connection information and other overhead items gets maxed out
--Swap affects performance and should be avoided
-Solution:
--Increase node size
--Increase our ConnectionOverhead parameter value (this will decrease memory available for caching data)
+1. Monitoring ElastiCache – CPU Utilization
+  - CPU host-level metrics
+    - Memcached is multi-threaded
+    - Redis is single-threaded
+  - Memcached
+    - Can handle loads of up to 90%
+    - Above 90% becomes a problem
+    - Solution: Increase the size of the node or scale out by adding more nodes
+  - Redis
+    - Calculate the threshold: (90 / # of CPU cores)
+    - Solution:
+    - For read-heavy workloads, increase the number of read replicas
+    - For write-heavy workloads, use a larger cache instance
+2. Monitoring ElastiCache – Evictions
+- Evictions happen when a new item is added but there is no more memory space. An older item must be deleted to make space.
+  - Memcached solution : Increase instance size or add nodes to your cluster
+  - Redis solution : Increase the node size
+3. Monitoring ElastiCache – Current Connections
+- An increase in CurrConnections could indicate a larger problem with your application
+- The application may not be releasing connections
+- Choose a threshold based off of your application requirements
+4. Monitoring ElastiCache – Swap usage
+- Monitor swap usage for Memcached. Swap could be caused because the memory allocated for connection information and other overhead items gets maxed out
+- Swap affects performance and should be avoided
+- Solution:
+- Increase node size
+- Increase our ConnectionOverhead parameter value (this will decrease memory available for caching data)
 
-9.Monitoring the Elastic Load Balancer for Performance and Availability
+#### 9.Monitoring the Elastic Load Balancer for Performance and Availability
 Amazon ELB – Monitoring Metrics  
 -Latency
     Time it takes to receive a response
