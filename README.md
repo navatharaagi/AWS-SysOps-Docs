@@ -115,10 +115,10 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 :wq!  /* [ */5 * * * * means every 5mins every hour,every day,every week, every month going to execute this cron job]
 [ec2…..aws-scripts-mon]$sudo tail -f  /var/log/cron /*to check cron expression is executing every 5mins
 ```
--Goto AWS Console, CloudWatch - Metrics - All Metrics - “Linux System metrics” will be created.If we check that, we can see created instance-ids with different metric names, can get respective graphs.
--We can create Alarm for any Metrics by just selecting the instance-id of a desired metric name.
+- Goto AWS Console, CloudWatch - Metrics - All Metrics - “Linux System metrics” will be created.If we check that, we can see created instance-ids with different metric names, can get respective graphs.
+- We can create Alarm for any Metrics by just selecting the instance-id of a desired metric name.
 
-5.Dedicating an Instance to Monitoring
+#### 5.Dedicating an Instance to Monitoring
 NAT instance: It allows our instances,subnets to download updates without having to make them public.Ideal for security purposes.
 To monitor NAT instance & swapped if its not working,this can be done by PING.
 -Launch two instances “NAT” & “Monitoring” in “Custom VPC” not in Default VPC by creating a “Public subnet”, put these two instances in that Public Subnet.
