@@ -235,13 +235,13 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - In Consolidated billing, we can manage `multiple AWS accounts` in one organization,organize groups & accounts,apply control policies over the usage of AWS resources. We can see all of the billing in individual user account level.
 - Each linked account is independent in every other way (i.e.,linked accounts resources can’t be used by us even we are paying bills, only account holders have access to their respective resources not by other linked accounts or organizations.)
 - Only disadvantage is for Free Tier, because if every linked account uses free tier,then it will be considered as whole usage across all accounts instead of individual accounts.
-Benefits:
--Volume Discounts for large enterprises using lot of data.
--EC2 Reserved Instances
--Amazon RDS DB instances
--AWS Credits
-Limits:
--Limit of 20 consolidated accounts that can be linked to a paying account
+- Benefits:
+  - Volume Discounts for large enterprises using lot of data.
+  - EC2 Reserved Instances
+  - Amazon RDS DB instances
+  - AWS Credits
+- Limits:
+  - Limit of 20 consolidated accounts that can be linked to a paying account
 
 2.AWS Billing Dimensions and Metrics for CloudWatch
 AWS Billing Dashboard - Preferences - Receive billing alerts
