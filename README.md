@@ -346,7 +346,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - To know what capacity our load balancer can handle, one way is to find out is to use “Load Testing” tools.
 
 - Quiz:
-Q.One of your customers needs business analytics from data stored in your Amazon RDS database. The problem is, this database is also used to serve data to other customers. The business analytics queries require a lot of table joins and expensive calculations that can't be offloaded to the client, and so you're worried about degrading performance. What can you do?
--Create a read replica specifically for this customer and their business analytics queries. Give them the replica's endpoint.
-Q.We’re restoring a volume from a snapshot and we need maximum performance as soon as we put the volume in production. How can we ensure maximum performance?
--Initialize (pre-warm) the volume by reading from every single block.
+1. One of your customers needs business analytics from data stored in your Amazon RDS database. The problem is, this database is also used to serve data to other customers. The business analytics queries require a lot of table joins and expensive calculations that can't be offloaded to the client, and so you're worried about degrading performance. What can you do?
+- Create a read replica specifically for this customer and their business analytics queries. Give them the replica's endpoint.
+2. We’re restoring a volume from a snapshot and we need maximum performance as soon as we put the volume in production. How can we ensure maximum performance?
+- Initialize (pre-warm) the volume by reading from every single block.
