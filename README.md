@@ -86,14 +86,14 @@ Instance Types – Burstable Performance
   - Stop and start instances
   - Terminate and re-launch instances with more memory, a different kernel, or different networking configuration
 
-  3.Creating CloudWatch Alarms
+#### 3.Creating CloudWatch Alarms
 
-4.Installing and Configuring Monitoring Scripts for Amazon EC2 Instances
-[ Links used:
--sudo yum install perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https
--curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip  -O    
--unzip CloudWatchMonitoringScripts-1.2.1.zip
--./mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1  ]  
+#### 4.Installing and Configuring Monitoring Scripts for Amazon EC2 Instances
+- [ Links used:-sudo yum install perl-Switch perl-DateTime perl-Sys-Syslog
+  perl-LWP-Protocol-https
+ -curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip  -O    
+ -unzip CloudWatchMonitoringScripts-1.2.1.zip
+ -./mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1  ]  
 
 -Create a IAM Role “cloudwatch-ec2-metrics” - “Amazon EC2” Role type - “CloudWatchFullAccess” Policy - Create.
 -Launch an EC2 Instance with Default VPC & "cloudwatch-ec2-metrics” IAM Role - Review & launch - launch - create New KeyPair "cloudwatch-ec2-test”- launch.
