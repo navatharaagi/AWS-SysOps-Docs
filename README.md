@@ -200,25 +200,24 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Increase our ConnectionOverhead parameter value (this will decrease memory available for caching data)
 
 #### 9.Monitoring the Elastic Load Balancer for Performance and Availability
-Amazon ELB – Monitoring Metrics  
--Latency
-    Time it takes to receive a response
-    Measure the AVG and MAX values to spot abnormal activity
--BackendConnectionErrors
-    Number of connections that were not successfully established between our load balancer and registered instances
-    Measure SUM and use the different between the minimum and maximums to spot issues
-Elastic Load Balancer (ELB) – Monitoring Metrics
--SurgeQueueLength
-    Measures the total number of requests that are waiting to be routed by the load balancer
--SpilloverCount
-    If the SurgeQueueLength is full, requests “spill over” and get dropped
-    Measure the SUM
--Pre-warming
-    If you are expecting a sudden and very large increase in traffic, you need to pre-warm your ELB to avoid dropped requests
-Elastic Load Balancer (ELB) – Other Metrics
--HTTP Responses
--RequestCount : Number of completed requests or connections made
--HealthyHostCount and UnHealthyHostCount
+- Amazon ELB – Monitoring Metrics  
+  - Latency
+    - Time it takes to receive a response
+    - Measure the AVG and MAX values to spot abnormal activity
+  - BackendConnectionErrors
+    - Number of connections that were not successfully established between our load balancer and registered instances
+    - Measure SUM and use the different between the minimum and maximums to spot issues
+- Elastic Load Balancer (ELB) – Monitoring Metrics
+  - SurgeQueueLength
+    - Measures the total number of requests that are waiting to be routed by the load balancer
+  - SpilloverCount
+    - If the SurgeQueueLength is full, requests “spill over” and get dropped Measure the SUM
+  - Pre-warming
+    - If you are expecting a sudden and very large increase in traffic, you need to pre-warm your ELB to avoid dropped requests
+- Elastic Load Balancer (ELB) – Other Metrics
+  - HTTP Responses
+  - RequestCount : Number of completed requests or connections made
+  - HealthyHostCount and UnHealthyHostCount
 
 Quiz:
 Q:Differences between EBS-backed storage and SSD-backed instance store?
