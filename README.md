@@ -167,10 +167,10 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
     - Memcached
     - Redis
   - Monitoring Metrics:
-    - CPU Utilization
-    - Evictions
-    - CurrConnections 
-   4.Swap Usage (Memcached)
+    1. CPU Utilization
+    2. Evictions
+    3. CurrConnections
+    4. Swap Usage (Memcached)
 1.Monitoring ElastiCache – CPU Utilization
 CPU host-level metrics
     Memcached is multi-threaded
