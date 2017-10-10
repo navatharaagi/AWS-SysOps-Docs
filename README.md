@@ -307,7 +307,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 #### Optimize the Environment to Ensure Maximum Performance
 1. Offloading Database Workload
 - Read replicas used for offload work from main DB. Writes goes to `Source Instance` ,Reads goes to `Read Replicas`
--Read Replicas uses Asynchronous replication & we can have Lag increases.we can check it through cloud watch metrics.
+- Read Replicas uses `Asynchronous replication` & we can have Lag increases.we can check it through cloud watch metrics.
 -Read replicas are different from Multi-AZ failover
 AWS Console—> RDS—>Launch MySQL Instance(Free Tier)—>Select launched Instance —>Instance Actions—> Modify—> Backup Retention—>Select days, Time —> Save.
 To create Read Replica, Select Instance—>Instance Actions—>Create Read Replica —> Give DB Instance Identifier & required  credentials —> create —>select created replica —> show monitoring —> check Replica Lag(if increase in this metric is a serious issue).
