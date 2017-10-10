@@ -301,4 +301,4 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 3. Which of these `services` give us access to the underlying `Operating System`?
 - Amazon EMR, EC2
 4. What are conditions that can trigger an Amazon `RDS failover` to happen?
-- Loss of `network` connectivity to the primary instance, `Storage` failure on the primary database, Some kind of resource failure with the underlying virtual resources.
+- Loss of `network` connectivity to the primary instance, `Storage` failure on the primary database, Some kind of `resource` failure with the underlying virtual resources.
