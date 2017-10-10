@@ -112,9 +112,8 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2…..aws-scripts-mon]$./mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1  /*telling the scripts to monitor these metrics
 [ec2…..aws-scripts-mon]$crontab -e /* to monitor metrics every 5mins
 */5 * * * * ~aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1   
-:wq!           /* [ */5 * * * * means every 5mins every hour,every day,every week,every month going to execute this cron job]
-[ec2…..aws-scripts-mon]$sudo tail -f  /var/log/cron   /*to check cron
-                                    expression is executing every 5mins
+:wq!  /* [ */5 * * * * means every 5mins every hour,every day,every week, every month going to execute this cron job]
+[ec2…..aws-scripts-mon]$sudo tail -f  /var/log/cron /*to check cron expression is executing every 5mins
 ```
 -Goto AWS Console, CloudWatch - Metrics - All Metrics - “Linux System metrics” will be created.If we check that, we can see created instance-ids with different metric names, can get respective graphs.
 -We can create Alarm for any Metrics by just selecting the instance-id of a desired metric name.
