@@ -136,11 +136,11 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2……]$ping  [paste private-ip of NAT instance]  /* now ping responds
 ```
 #### 6.Monitoring EBS for Performance and Availability
-EBS(Elastic Block Store)  Performance Essentials
--EBS uses IOPS (I/O operations per second) as a performance measure
-EBS Performance – SSD-backed volumes
--Two different types of SSD volumes: io1 and gp2
--gp2 – General Purpose (default)
+- EBS(Elastic Block Store) Performance Essentials
+  - EBS uses IOPS (I/O operations per second) as a performance measure
+- EBS Performance – SSD-backed volumes
+  - Two different types of SSD volumes: io1 and gp2
+  - gp2 – General Purpose (default)
 
 7.Monitoring RDS for Performance and Availability
 Amazon RDS – Monitoring Metrics
