@@ -108,7 +108,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2…….]$curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip  -O   /*to download scripts zip file
 [ec2…..]$unzip CloudWatchMonitoringScripts-1.2.1.zip /*to unzip above file
 [ec2…..]$cd aws-scripts-mon/          
-[ec2…..aws-scripts-mon]$ls   /*lists creds template,put,get,.pm,txt files.
+[ec2…..aws-scripts-mon]$ls /*lists creds template,put,get,.pm,txt files.
 [ec2…..aws-scripts-mon]$./mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1        /*telling the scripts to monitor these metrics
 [ec2…..aws-scripts-mon]$crontab -e    /* to monitor metrics every 5mins
 */5 * * * * ~aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1   
