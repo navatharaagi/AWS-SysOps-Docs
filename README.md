@@ -229,7 +229,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 4. Which of the following metrics do not get automatically reported to Amazon CloudWatch from Amazon EC2?
 - The amount of memory being used, The amount of swap space used, How much disk space is available
 
-### Demonstrate Ability to Monitor and Manage Billing and Cost Optimization Processes
+#### Demonstrate Ability to Monitor and Manage Billing and Cost Optimization Processes
 1.AWS Billing and Linking AWS Accounts
 AWS Billing Dashboard - Consolidated Billing - Get Started
 In Consolidated billing, we can manage multiple AWS accounts in one organization,organize groups & accounts,apply control policies over the usage of AWS resources. We can see all of the billing in individual user account level.
