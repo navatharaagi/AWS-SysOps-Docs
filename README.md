@@ -286,8 +286,8 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Assign a `role` to the EC2 instance which will be sending custom metrics to CloudWatch.
 
 #### High Availability
-Implement Scalability and Elasticity Based on Scenario
-1.Scalability and Elasticity Essentials
+#### Implement Scalability and Elasticity Based on Scenario
+#### 1.Scalability and Elasticity Essentials
 
 DEMONSTRATE YOUR ABILITY TO ENSURE LEVELS OF FAULT TOLERANCE BASED ON BUSINESS NEEDS
 Quiz:
