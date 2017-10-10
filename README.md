@@ -313,7 +313,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - To create Read Replica, Select Instance—>Instance Actions—>Create Read Replica —> Give DB Instance Identifier & required credentials—>create —>select created replica—>show monitoring—>check Replica Lag(if increase in this metric is a serious issue).
 - MySQL instance & its read replica instance `Endpoints names will be different`.So we can point `Writes` to MYSQL instance Whereas `Reads` to  Read-Replica instance using Load Balancer Algorithms.
 - To Promote Read Replica instance to a "Stand-alone Instance”.
-- Select Read Replica instance—>Right click—> Promote Read Replica—>Enable automative backups & retention period —> continue—> promote read replica.
+- Select Read Replica instance—>Right click—>Promote Read Replica—>Enable automative backups & retention period—>continue—>promote read replica.
 - After this,DB is now being promoted to stand alone instance, which we could for another application to read & write data.Once this is done, we can enable “Multi-AZ failover” for this DB since it is now Stand alone DB not a read replica anymore.
 AWS RDS Read Replication vs. Multi-AZ failover deployments
 -Read replicas are built primarily for performance and offloading work
