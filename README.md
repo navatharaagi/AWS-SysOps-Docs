@@ -135,8 +135,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 ```ssh
 [ec2……]$ping  [paste private-ip of NAT instance]  /* now ping responds
 ```
-
-6.Monitoring EBS for Performance and Availability
+#### 6.Monitoring EBS for Performance and Availability
 EBS(Elastic Block Store)  Performance Essentials
 -EBS uses IOPS (I/O operations per second) as a performance measure
 EBS Performance – SSD-backed volumes
