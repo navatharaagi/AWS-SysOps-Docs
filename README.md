@@ -302,3 +302,52 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Amazon EMR, EC2
 4. What are conditions that can trigger an Amazon `RDS failover` to happen?
 - Loss of `network` connectivity to the primary instance, `Storage` failure on the primary database, Some kind of `resource` failure with the underlying virtual resources.
+
+Analysis:
+Optimize the Environment to Ensure Maximum Performance
+1.Offloading Database Workload
+-Read replicas used for offload work from main DB. Writes goes to “Source Instance” ,Reads goes to “Read Replicas"
+-Read Replicas uses Asynchronous replication & we can have Lag increases.we can check it through cloud watch metrics.
+-Read replicas are different from Multi-AZ failover
+AWS Console—> RDS—>Launch MySQL Instance(Free Tier)—>Select launched Instance —>Instance Actions—> Modify—> Backup Retention—>Select days, Time —> Save.
+To create Read Replica, Select Instance—>Instance Actions—>Create Read Replica —> Give DB Instance Identifier & required  credentials —> create —>select created replica —> show monitoring —> check Replica Lag(if increase in this metric is a serious issue).
+MySQL instance & its read replica instance “Endpoints names will be different”.So we can point “Writes” to MYSQL instance Whereas “Reads” to Read-Replica instance using Load Balancer Algorithms.
+To Promote Read Replica instance to a "Stand-alone Instance”.
+Select Read Replica instance—>Right click—> Promote Read Replica—>Enable automative backups & retention period —> continue—> promote read replica.
+-After this,  DB is now being promoted to stand alone instance, which we could for another application to read & write data.Once this is done, we can enable “Multi-AZ failover” for this DB since it is now Stand alone DB not a read replica anymore.
+AWS RDS Read Replication vs. Multi-AZ failover deployments
+-Read replicas are built primarily for performance and offloading work
+-Multi-AZ deployments are used for high availability and durability
+-Multi-AZ deployments give us synchronous replication instead of asynchronous
+-Multi-AZ deployments are only used to perform a failover, they are idle the rest of the time
+-Read replicas are used to serve legitimate traffic
+-It is often beneficial to use both of these as complements
+
+2.Initializing (Pre-warming) EBS Volumes
+EC2 —> Snapshots —>  create a snapshot —> select created snapshot —> Right click —> Create Volume with Volume Type “General Purpose SSD” & select Availability zone same as creating EC2 instance.
+EC2 —> Volumes—> Volume must be created in same availability zone as EC2 instance
+EC2—> launch an Amazon linux instance with SG - SSH & existing essential key pair  “EBS volume”  in same availability zone as in Volume.
+EC2—>Volumes—>Select created Volume —> Right click —> Attach —> select running instance.
+EC2—> Instances —> connect —> ssh into ec2 instance by going to CLI.
+[ec2@..]$lsblk      /* shows all of the different volumes where they are mounted.as of
+                                now there will be no outpoint
+
+[ec2@..]$sudo dd   if=/dev/xvdf   of=/dev/null  bs=1M   /* ”if" - i/p file, “of" - o/p file
+                                                                              “bs”- block size of the read operation
+[ec2@..]$sudo yum install  -y fio     /* to install fio utility
+[ec2@..]$sudo  fio  - -filename=/dev/xvdf   - -rw=randread  - -bs=128k  - -iodepth=32  - -ioengine=libaio  - -direct=1  - -name=volume-initialize
+
+3.Pre-warming The Elastic Load Balancer
+-Pre-warming means configuring the elastic load balancer to have enough capacity to handle whatever traffic/demand there is going to be.
+-HTTP 503 Error (ELB cannot handle anymore requests)
+    Does not queue requests but instead drops them
+-ELB is designed to increase its resource capacity with gradual increases in traffic
+-When expecting significant spikes in traffic it is possible the traffic is sent faster than the ELB can “expand”
+    Contact AWS for “pre-warming” of the ELB
+-To know what capacity our load balancer can handle, one way is to find out is to use “Load Testing” tools.
+
+Quiz:
+Q.One of your customers needs business analytics from data stored in your Amazon RDS database. The problem is, this database is also used to serve data to other customers. The business analytics queries require a lot of table joins and expensive calculations that can't be offloaded to the client, and so you're worried about degrading performance. What can you do?
+-Create a read replica specifically for this customer and their business analytics queries. Give them the replica's endpoint.
+Q.We’re restoring a volume from a snapshot and we need maximum performance as soon as we put the volume in production. How can we ensure maximum performance?
+-Initialize (pre-warm) the volume by reading from every single block.
