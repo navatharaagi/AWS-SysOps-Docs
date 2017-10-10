@@ -105,7 +105,7 @@ $cd downloads/                /* where Key pair file was downloaded
 $chmod 400 cloudwatch-ec2-test.pem
 $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2…….]$sudo yum install perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https    /* to install some scripts we need “perl” software,so install it by using above command of Amazon linux AMI
-[ec2…….]$curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip  -O                     /*to download scripts zip file
+[ec2…….]$curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip  -O   /*to download scripts zip file
 [ec2…..]$unzip CloudWatchMonitoringScripts-1.2.1.zip    /*to unzip above file
 [ec2…..]$cd aws-scripts-mon/          
 [ec2…..aws-scripts-mon]$ls   /*lists creds template,put,get,.pm,txt files.
