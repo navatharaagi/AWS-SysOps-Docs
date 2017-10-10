@@ -323,7 +323,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Read replicas are used to serve legitimate traffic
 - It is often beneficial to use both of these as complements
 
-2.Initializing (Pre-warming) EBS Volumes
+#### 2.Initializing (Pre-warming) EBS Volumes
 EC2 —> Snapshots —>  create a snapshot —> select created snapshot —> Right click —> Create Volume with Volume Type “General Purpose SSD” & select Availability zone same as creating EC2 instance.
 EC2 —> Volumes—> Volume must be created in same availability zone as EC2 instance
 EC2—> launch an Amazon linux instance with SG - SSH & existing essential key pair  “EBS volume”  in same availability zone as in Volume.
