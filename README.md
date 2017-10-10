@@ -256,19 +256,19 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
   - Save costs by minimizing the number of EC2 instances in-use
   - Set CloudWatch alarms to spin down underutilized instances
   - Find the right balance between availability and cost
-Idle Load Balancers
--Remove unused load balancers since we pay per load balancer
-Amazon EBS Volumes
--EBS volumes cost, even when not in-use
--Delete unused volumes
-    Take a snapshot if you want to keep the data
-    Snapshots are usually smaller in size and we only need one snapshot for a volume
--Provisioned IOPS cost more
--Downsize volumes that aren’t anywhere near full capacity
-Unassociated Elastic IP Addresses
--EIPs cost money when not in use – disassociate them
--Having more than one EIP associated to an instance costs money
--EIPs on stopped instances cost an hourly fee
+- Idle Load Balancers
+  - Remove unused load balancers since we pay per load balancer
+- Amazon EBS Volumes
+  - EBS volumes cost, even when not in-use
+  - Delete unused volumes
+    - Take a snapshot if you want to keep the data
+    - Snapshots are usually smaller in size and we only need one snapshot for a volume
+  - Provisioned IOPS cost more
+  - Downsize volumes that aren’t anywhere near full capacity
+- Unassociated Elastic IP Addresses
+  - EIPs cost money when not in use – disassociate them
+  - Having more than one EIP associated to an instance costs money
+  - EIPs on stopped instances cost an hourly fee
 Idle Amazon RDS DB Instances
 -Take snapshots of unused DB instances, and delete them
 
