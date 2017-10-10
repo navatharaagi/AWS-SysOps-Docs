@@ -129,10 +129,12 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 ```ssh
 [ec2……]$ping  [paste private-ip of NAT instance] /*it will not work because of SG which inbound rules has only SSH
 ```
-Now goto EC2 dashboard - Security Groups - select the “Monitoring” Instance SG & Copy its "Group-Id" from description.
-Now goto NAT instance - Security Group -Edit inbound rules by allowing “All ICMP” traffic  - Source “custom IP - paste the copied SG-id” - save
-Now goto CLI, do ping again
+- Now goto EC2 dashboard - Security Groups - select the “Monitoring” Instance SG & Copy its "Group-Id" from description.
+- Now goto NAT instance - Security Group - Edit inbound rules by allowing “All ICMP” traffic  - Source “custom IP - paste the copied SG-id” - save
+- Now goto CLI, do ping again
+```ssh
 [ec2……]$ping  [paste private-ip of NAT instance]  /* now ping responds
+```
 
 6.Monitoring EBS for Performance and Availability
 EBS(Elastic Block Store)  Performance Essentials
