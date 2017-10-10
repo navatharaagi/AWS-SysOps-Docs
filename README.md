@@ -333,7 +333,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2@..]$lsblk  /* shows all of the different volumes where they are mounted.as of now there will be no moutpoint
 [ec2@..]$sudo dd if=/dev/xvdf of=/dev/null bs=1M  /* ”if" - i/p file, “of" - o/p file “bs”- block size of the read operation
 [ec2@..]$sudo yum install -y fio   /* to install fio utility
-[ec2@..]$sudo  fio  - -filename=/dev/xvdf   - -rw=randread  - -bs=128k  - -iodepth=32  - -ioengine=libaio  - -direct=1  - -name=volume-initialize
+[ec2@..]$sudo fio --filename=/dev/xvdf --rw=randread --bs=128k --iodepth=32 --ioengine=libaio --direct=1 --name=volume-initialize
 
 3.Pre-warming The Elastic Load Balancer
 -Pre-warming means configuring the elastic load balancer to have enough capacity to handle whatever traffic/demand there is going to be.
