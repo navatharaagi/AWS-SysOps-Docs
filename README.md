@@ -314,7 +314,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - MySQL instance & its read replica instance `Endpoints names will be different`.So we can point `Writes` to MYSQL instance Whereas `Reads` to  Read-Replica instance using Load Balancer Algorithms.
 - To Promote Read Replica instance to a "Stand-alone Instance”.
 - Select Read Replica instance—>Right click—>Promote Read Replica—>Enable automative backups & retention period—>continue—>promote read replica.
-- After this,DB is now being promoted to stand alone instance, which we could use for another application to read & write data.Once this is done, we can enable “Multi-AZ failover” for this DB since it is now Stand alone DB not a read replica anymore.
+- After this,DB is now being promoted to stand alone instance, which we could use for another application to read & write data.Once this is done, we can enable `Multi-AZ failover` for this DB since it is now Stand alone DB not a read replica anymore.
 AWS RDS Read Replication vs. Multi-AZ failover deployments
 -Read replicas are built primarily for performance and offloading work
 -Multi-AZ deployments are used for high availability and durability
