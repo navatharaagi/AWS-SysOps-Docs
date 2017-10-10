@@ -350,3 +350,53 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Create a read replica specifically for this customer and their business analytics queries. Give them the replica's endpoint.
 2. We’re restoring a volume from a snapshot and we need maximum performance as soon as we put the volume in production. How can we ensure maximum performance?
 - Initialize (pre-warm) the volume by reading from every single block.
+
+Identify Performance Bottlenecks and Implement Remedies
+1.Resizing or Changing EBS Root Volume
+-To change vol size or vol type to provision iops. First backup the information by creating a snapshot.
+EC2 Dashboard—>Volumes—>Select volume which attached to running instance—> Actions—>create snapshot by giving name & description.
+-Check the created snapshot by going to EC2—>Snapshots.
+-To create bigger vol or different type of volumes with provisioned iops by using the created snapshot
+EC2—>snapshots—>select created snapshot—>Actions—>Create Volume with vol type “general purpose SSD”, size “100”, Availability Zone same as snapshot’s.
+-Now we have to attach this vol to an running instance, but problem is  we want it to be a root vol instead of  being extra attached vol.so we want to replace the smaller vol with this larger vol.i.e., we are going to have some downtime because we have to stop the instance to replace the vols.
+-EC2 instance—>select running instance—>stop
+-EC2—>Volumes—>select the smaller size vol—>detach it by going to actions—> select bigger volume size—>Actions—>Attach Vol—>select running Instance—> device—>/dev/xvda(which is same as instance root instance)—>attach.
+-EC2 instance—>restart—>Connect & ssh into it by going to CLI.
+[ec2@user…]lsbk     /*shows Root devices details with mount point.
+[ec2@user…]df  -h  /*to get more info
+[ec2@user…]sudo file -s /dev/xvda
+[ec2@user…]sudo file -s /dev/xvda1
+[ec2@user…]sudo  resize2fs  /dev/xvda1 /* gives nothing do because it has 100gib.
+
+2.SSL on Elastic Load Balancer
+SSL Certificates can be taxing on an instance and can cause performance issues with spikes in traffic.To remedy that by applying the SSL certificate to the Elastic Load Balancer instead.
+EC2—>Load Balancers—>create load balancer with default VPC—>HTTP & HTTPS protocol with “HTTP” protocol for both—>select a new SG with name & description, Type 2 “Custom TCP Rule”,Port Range “80 & 443” with “Anywhere” source—> Configure security settings—>select upload cert to IAM for 3rd party certificates with name,public key & private keys of certificate—>create.
+
+3.Network Bottlenecks
+Potential Networking Issues
+-One of the primary network bottlenecks comes from EC2 instances
+-Potential causes for bottlenecks
+    -Instances are in different Availability Zones, regions, or continents
+    -EC2 instance sizes (larger instances generally have better bandwidth performance)
+    -Not using enhanced networking features
+-We can check network performance with “iperf3"
+    - https://github.com/esnet/iperf
+-VPCs can use VPC Peering to create a reliable connection
+    -No single point of failure for communication or bandwidth bottlenecks
+1. Create two EC2 instances on AWS
+2. Install iperf3 to each instance
+3. Start the iperf3 server on one instance
+4. Run an iperf3 test from the other instance
+-EC2—>launch an linux instance—>configure instance details—>No. of instances “2”—>Auto-assign Public IP—>Enable & leave remaining as it is—> SG with HTTP & SSH inbound custom rules—>download pem file—>name the created 2 instances.
+-Select one running instance & connect to it through ssh.
+[ec2@user…]$ sudo yum  - -enablerepo=epel  install iperf  iperf3 /*to install iperf3
+[ec2@user…]$ sudo iperf3  -s  -p 80  /* for server listening on port 80
+-open another terminal window,
+-Select another running instance & connect to it through ssh.
+[ec2@user…]$ sudo yum  - -enablerepo=epel  install iperf  iperf3 /*to install iperf3
+-Copy the Public IP of 1st selected instance
+[ec2@user…]$ sudo iperf3  -c  <paste copied public ip>  -i 1  -t 10 -p 80  /*[ for connection on port 80  “i”-interval of 1sec, “t”- total time of 10 sec]
+-Using a VPN to access our AWS VPC from our on-premise network means we have to communicate over the open Internet,for that We can use AWS Direct Connect
+
+Identify Potential Issues on a Given Application Deployment
+1.EBS Root Devices on Terminated Instances - Ensuring Data Durability
