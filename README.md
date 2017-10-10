@@ -243,7 +243,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Limits:
   - Limit of 20 consolidated accounts that can be linked to a paying account
 
-2.AWS Billing Dimensions and Metrics for CloudWatch
+#### 2.AWS Billing Dimensions and Metrics for CloudWatch
 AWS Billing Dashboard - Preferences - Receive billing alerts
 Can create Alarms in CloudWatch for billing metrics.
 
