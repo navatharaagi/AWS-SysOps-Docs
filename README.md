@@ -248,10 +248,10 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Can create Alarms in CloudWatch for billing metrics.
 
 #### 3.Cost Optimizing
-Optimizing Costs – EC2 Reserved Instances
--Save costs by purchasing reserved instances
--Reserve instances for 1 to 3 years at a discounted rate
--Some instances can be sold for a fee
+- Optimizing Costs – EC2 Reserved Instances
+  - Save costs by purchasing reserved instances
+  - Reserve instances for 1 to 3 years at a discounted rate
+  - Some instances can be sold for a fee
 Low Utilization
 -Save costs by minimizing the number of EC2 instances in-use
 -Set CloudWatch alarms to spin down underutilized instances
