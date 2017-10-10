@@ -269,8 +269,8 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
   - EIPs cost money when not in use – disassociate them
   - Having more than one EIP associated to an instance costs money
   - EIPs on stopped instances cost an hourly fee
-Idle Amazon RDS DB Instances
--Take snapshots of unused DB instances, and delete them
+- Idle Amazon RDS DB Instances
+  - Take snapshots of unused DB instances, and delete them
 
 4.Using the AWS Price List API and Cost Explorer
 AWS Billing Dashboard - Cost Explorer - Launch Cost Explorer
