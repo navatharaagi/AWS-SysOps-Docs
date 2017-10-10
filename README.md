@@ -232,7 +232,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 #### Demonstrate Ability to Monitor and Manage Billing and Cost Optimization Processes
 #### 1.AWS Billing and Linking AWS Accounts
 - AWS Billing Dashboard - Consolidated Billing - Get Started
-- In Consolidated billing, we can manage 'multiple AWS accounts' in one organization,organize groups & accounts,apply control policies over the usage of AWS resources. We can see all of the billing in individual user account level.
+- In Consolidated billing, we can manage `multiple AWS accounts` in one organization,organize groups & accounts,apply control policies over the usage of AWS resources. We can see all of the billing in individual user account level.
 -Each linked account is independent in every other way (.i.e., linked accounts resources can’t be used by us even we are paying bills, only account holders have access to their respective resources not by other linked accounts or organizations.)
 -Only disadvantage is for Free Tier, because if every linked account uses free tier,then it will be considered as whole usage across all accounts instead of individual accounts.
 Benefits:
