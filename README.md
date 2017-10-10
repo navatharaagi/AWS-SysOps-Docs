@@ -273,19 +273,19 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
   - Take snapshots of unused DB instances, and delete them
 
 #### 4.Using the AWS Price List API and Cost Explorer
-AWS Billing Dashboard - Cost Explorer - Launch Cost Explorer
+- AWS Billing Dashboard - Cost Explorer - Launch Cost Explorer
 
-Quiz
-Q.What would be the best method for attempting to fix a failing system status check?
--By stopping and starting the instance, the instance will most likely be launched on a different physical host. Since system failures are related to the physical host then this is the best method for resolving the failure.
-Q.You've created a CloudWatch alarm to monitor ElastiCache evictions. The CloudWatch alarm begins to alert you that the number of evictions has surpassed your applications requirements. How might you go about resolving the high eviction amount issue?
--Increaseing the size of the ElastiCache instance, Adding another node to the ElastiCache cluster
-Q.AWS Allows billing metrics across all consolidated billing accounts from the payer account.
--True
-Q.In order to monitor operating system-level metrics such as disk usage, swap usage, and memory usage, you must install EC2 monitoring scripts. These scripts put custom metric data into Amazon CloudWatch. What do you need to do in order to give the "instance permissions" to put those custom metrics in CloudWatch?
--Assign a role to the EC2 instance which will be sending custom metrics to CloudWatch.
+- Quiz
+1. What would be the best method for attempting to fix a failing system status check?
+- By stopping and starting the instance, the instance will most likely be launched on a different physical host. Since system failures are related to the physical host then this is the best method for resolving the failure.
+2. You've created a CloudWatch alarm to monitor ElastiCache evictions. The CloudWatch alarm begins to alert you that the number of evictions has surpassed your applications requirements. How might you go about resolving the high eviction amount issue?
+- Increaseing the size of the ElastiCache instance, Adding another node to the ElastiCache cluster
+3. AWS Allows billing metrics across all consolidated billing accounts from the payer account.
+- True
+4. In order to monitor operating system-level metrics such as disk usage, swap usage, and memory usage, you must install EC2 monitoring scripts. These scripts put custom metric data into Amazon CloudWatch. What do you need to do in order to give the "instance permissions" to put those custom metrics in CloudWatch?
+- Assign a role to the EC2 instance which will be sending custom metrics to CloudWatch.
 
-High Availability
+#### High Availability
 Implement Scalability and Elasticity Based on Scenario
 1.Scalability and Elasticity Essentials
 
