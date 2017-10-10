@@ -162,11 +162,11 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
     - Average number of bytes read or written to or from disk per second
 
 #### 8.Monitoring ElastiCache for Performance and Availability
-Monitoring ElastiCache
--ElastiCache supports two engines:
-    Memcached
-    Redis
--Monitoring Metrics
+- Monitoring ElastiCache
+  - ElastiCache supports two engines:
+    - Memcached
+    - Redis
+- Monitoring Metrics
     1.CPU Utilization
     2.Evictions
     3.CurrConnections
