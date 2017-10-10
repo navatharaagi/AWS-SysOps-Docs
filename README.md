@@ -95,13 +95,17 @@ Instance Types – Burstable Performance
  -unzip CloudWatchMonitoringScripts-1.2.1.zip
  -./mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1  ]  
 
--Create a IAM Role “cloudwatch-ec2-metrics” - “Amazon EC2” Role type - “CloudWatchFullAccess” Policy - Create.
--Launch an EC2 Instance with Default VPC & "cloudwatch-ec2-metrics” IAM Role - Review & launch - launch - create New KeyPair "cloudwatch-ec2-test”- launch.
--Goto CLI
+- Create a IAM Role “cloudwatch-ec2-metrics” - “Amazon EC2” Role type -
+  “CloudWatchFullAccess” Policy - Create.
+- Launch an EC2 Instance with Default VPC & "cloudwatch-ec2-metrics” IAM
+  Role - Review & launch - launch - create New KeyPair "cloudwatch-ec2-test” - launch.
+- Goto CLI
+```sh
 $cd downloads/                /* where Key pair file was downloaded
 $chmod 400 cloudwatch-ec2-test.pem
 $ssh into EC2 instance by using “connect” option which gives ssh command
-[ec2…….]$sudo yum install perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https              /* to install some scripts we need “perl” software,so install it by using above command of Amazon linux AMI
+[ec2…….]$sudo yum install perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https              /* to install some scripts we need
+  “perl” software,so install it by using above command of Amazon linux AMI
 [ec2…….]$curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip  -O                     /*to download scripts zip file
 [ec2…..]$unzip CloudWatchMonitoringScripts-1.2.1.zip    /*to unzip above file
 [ec2…..]$cd aws-scripts-mon/          
@@ -110,9 +114,9 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2…..aws-scripts-mon]$crontab -e    /* to monitor metrics every 5mins
 */5 * * * * ~aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail --swap-util --swap-used --disk-space-util --disk-space-used --disk-space-avail --memory-units=megabytes --disk-space-units=gigabytes --disk-path=/dev/xvda1   
 :wq!           /* [ */5 * * * * means every 5mins every hour,every day,every week,every month going to execute this cron job]
-[ec2…..aws-scripts-mon]$sudo tail -f  /var/log/cron   /*to check cron expression is
-                                                                                        executing every 5mins
-
+[ec2…..aws-scripts-mon]$sudo tail -f  /var/log/cron   /*to check cron
+                                    expression is executing every 5mins
+```
 -Goto AWS Console, CloudWatch - Metrics - All Metrics - “Linux System metrics” will be created.If we check that, we can see created instance-ids with different metric names, can get respective graphs.
 -We can create Alarm for any Metrics by just selecting the instance-id of a desired metric name.
 
