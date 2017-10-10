@@ -219,17 +219,17 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
   - RequestCount : Number of completed requests or connections made
   - HealthyHostCount and UnHealthyHostCount
 
-Quiz:
-Q:Differences between EBS-backed storage and SSD-backed instance store?
-SSD-backed instance store is usually faster because it is physically attached to the host computer, while EBS volumes transfer data over the network which adds latency., SSD-backed instance store is ephemeral while EBS-backed storage is persistent.
-Q:What best describes burstable performance for t2.micro instances?
-Burstable performance gives you a baseline performance and CPU credits that allow you to burst above this baseline if needed.
-Q:ElastiCache Redis cluster is under a lot of load and needs to scale. Which of these is the best way to scale your cluster?
-If the load is read-heavy, scale by adding read replicas to your cache cluster. If the load is write-heavy, scale vertically by increasing the node size.
-Q:Which of the following metrics do not get automatically reported to Amazon CloudWatch from Amazon EC2?
-The amount of memory being used, The amount of swap space used, How much disk space is available
+#### Quiz:
+1. Differences between EBS-backed storage and SSD-backed instance store?
+- SSD-backed instance store is usually faster because it is physically attached to the host computer, while EBS volumes transfer data over the network which adds latency., SSD-backed instance store is ephemeral while EBS-backed storage is persistent.
+2. What best describes burstable performance for t2.micro instances?
+- Burstable performance gives you a baseline performance and CPU credits that allow you to burst above this baseline if needed.
+3. ElastiCache Redis cluster is under a lot of load and needs to scale. Which of these is the best way to scale your cluster?
+- If the load is read-heavy, scale by adding read replicas to your cache cluster. If the load is write-heavy, scale vertically by increasing the node size.
+4. Which of the following metrics do not get automatically reported to Amazon CloudWatch from Amazon EC2?
+- The amount of memory being used, The amount of swap space used, How much disk space is available
 
-Demonstrate Ability to Monitor and Manage Billing and Cost Optimization Processes
+### Demonstrate Ability to Monitor and Manage Billing and Cost Optimization Processes
 1.AWS Billing and Linking AWS Accounts
 AWS Billing Dashboard - Consolidated Billing - Get Started
 In Consolidated billing, we can manage multiple AWS accounts in one organization,organize groups & accounts,apply control policies over the usage of AWS resources. We can see all of the billing in individual user account level.
