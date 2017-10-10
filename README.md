@@ -247,7 +247,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - AWS Billing Dashboard - Preferences - Receive billing alerts
 - Can create Alarms in CloudWatch for billing metrics.
 
-3.Cost Optimizing
+#### 3.Cost Optimizing
 Optimizing Costs – EC2 Reserved Instances
 -Save costs by purchasing reserved instances
 -Reserve instances for 1 to 3 years at a discounted rate
