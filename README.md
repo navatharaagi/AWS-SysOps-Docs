@@ -305,7 +305,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 
 ### Analysis:
 #### Optimize the Environment to Ensure Maximum Performance
-#### 1. Offloading Database Workload
+#### 1.Offloading Database Workload
 - Read replicas used for offload work from main DB. Writes goes to `Source Instance` ,Reads goes to `Read Replicas`
 - Read Replicas uses `Asynchronous replication` & we can have Lag increases.we can check it through cloud watch metrics.
 - Read replicas are different from Multi-AZ failover.
@@ -351,7 +351,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 2. We’re restoring a volume from a snapshot and we need maximum performance as soon as we put the volume in production. How can we ensure maximum performance?
 - Initialize (pre-warm) the volume by reading from every single block.
 
-### Identify Performance Bottlenecks and Implement Remedies
+#### Identify Performance Bottlenecks and Implement Remedies
 #### 1.Resizing or Changing EBS Root Volume
 - To change vol size or vol type to provision iops. First backup the information by creating a snapshot.
 - EC2 Dashboard—>Volumes—>Select volume which attached to running instance—> Actions—>create snapshot by giving name & description.
