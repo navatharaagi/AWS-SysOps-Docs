@@ -452,9 +452,9 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - OpsWorks gives us a flexible way to create & manage resources for our applications,as well as the applications themselves.
 - we can create a Stack of resources & manage those resources collectively in different layers.These layers can have built-in Chef recipes.
 - we can use OpsWorks to:
-    -Automate deployments
-    -Monitor deployments
-    -Maintain deployments
+    - Automate deployments
+    - Monitor deployments
+    - Maintain deployments
 AWS OpsWorks
 -OpsWorks removes a lot of leg work associated with creating & maintaining application in AWS
 -OpsWorks provides abstraction from the underlying infrastructure while still giving plenty of control.Infact, OpsWorks can give us more customization than Elastic Beanstalk.
