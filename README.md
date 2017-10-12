@@ -392,7 +392,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Select one running instance & connect to it through ssh.
 ```ssh
 [ec2@user…]$sudo yum --enablerepo=epel install iperf iperf3 /*to install iperf3
-[ec2@user…]$ sudo iperf3  -s  -p 80  /* for server listening on port 80
+[ec2@user…]$sudo iperf3  -s  -p 80  /* for server listening on port 80
 ```
 - open another terminal window,
 - Select another running instance & connect to it through ssh.
