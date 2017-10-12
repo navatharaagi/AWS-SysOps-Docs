@@ -496,8 +496,8 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - OpsWorks—>layers—>settings—>Network—>select ELB which created above—> shut down instance without w8ing for connections to drain—>save
 - OpsWorks—>Apps—>Add App—>Name—>type vl get by default—> data source “none”—>Repo type “git”—>Repo URL `https://github.com/pinehead/opsworks-sysops.git`—>Add App—>Deploy—> command—>select Deploy—> Advanced—> instances—>select “PHP APP server” layer & its instance—>deploy.
 - Click on instance we can see logs,public IP,… Goto Public IP,it should work,pulls php page.
-- Opsworks—>layers—>ELB—>it will not work,so check SG of ELB by going into EC2
+- OpsWorks—>layers—>ELB—>it will not work,so check SG of ELB by going into EC2
 - EC2—>ELB—>SG—>Inbound—>Edit—>source—>0.0.0.0/0—>save.
-- Now go back to Opsworks—>layers—>ELB—>it should work.
+- Now go back to OpsWorks—>layers—>ELB—>it should work.
 
 #### 3.CloudFormation: Essentials
