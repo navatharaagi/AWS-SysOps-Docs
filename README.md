@@ -448,7 +448,7 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 
 ### Deployment & Provisioning
 #### Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
-1.OpsWorks: Overview
+#### 1.OpsWorks: Overview
 2.OpsWorks: Creating our First Stack
 AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
 Next Add a Layer—>layer type—>php app server—>add layer
