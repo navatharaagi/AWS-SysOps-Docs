@@ -501,21 +501,21 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - Now go back to OpsWorks—>layers—>ELB—>it should work.
 
 #### 3.CloudFormation: Essentials
-Amazon CloudFormation
--CloudFormation allows to create & provision resources in a reusable template fashion
--CloudFormation turns our resources into stacks that work as units
--CloudFormation allows us to source control our infrastructure
--Templates are JSON compatible
-Anatomy of a CloudFormation Template
--Templates can have 8 main sections
-    -AWSTemplateFormatVersion
-    -Description
-    -Metadata : JSON objects that provide details about the template
-    -Parameters
-    -Mappings
-    -Conditions
-    -Resources
-    -Outputs
+#### Amazon CloudFormation
+- CloudFormation allows to create & provision resources in a reusable template fashion
+- CloudFormation turns our resources into stacks that work as units
+- CloudFormation allows us to source control our infrastructure
+- Templates are JSON compatible
+#### Anatomy of a CloudFormation Template
+- Templates can have 8 main sections
+    - AWSTemplateFormatVersion
+    - Description
+    - Metadata : JSON objects that provide details about the template
+    - Parameters
+    - Mappings
+    - Conditions
+    - Resources
+    - Outputs
 Intrinsic Functions
 -Used to pass in values that are not available until run time
 -Fn::GetAtt
