@@ -360,8 +360,8 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - EC2—>snapshots—>select created snapshot—>Actions—>Create Volume with vol type “general purpose SSD”, size “100”, Availability Zone same as snapshot’s.
 - Now we have to attach this vol to an running instance, but problem is  we want it to be a root vol instead of  being extra attached vol.so we want to replace the smaller vol with this larger vol.i.e., we are going to have some downtime because we have to stop the instance to replace the vols.
 - EC2 instance—>select running instance—>stop
--EC2—>Volumes—>select the smaller size vol—>detach it by going to actions—> select bigger volume size—>Actions—>Attach Vol—>select running Instance—> device—>/dev/xvda(which is same as instance root instance)—>attach.
--EC2 instance—>restart—>Connect & ssh into it by going to CLI.
+- EC2—>Volumes—>select the smaller size vol—>detach it by going to actions—> select bigger volume size—>Actions—>Attach Vol—>select running Instance—> device—>/dev/xvda(which is same as instance root instance)—>attach.
+- EC2 instance—>restart—>Connect & ssh into it by going to CLI.
 [ec2@user…]lsbk     /*shows Root devices details with mount point.
 [ec2@user…]df  -h  /*to get more info
 [ec2@user…]sudo file -s /dev/xvda
