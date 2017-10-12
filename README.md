@@ -367,7 +367,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2@user…]df -h   /*to get more info
 [ec2@user…]sudo file -s /dev/xvda
 [ec2@user…]sudo file -s /dev/xvda1
-[ec2@user…]sudo  resize2fs  /dev/xvda1 /* gives nothing do because it has 100gib.
+[ec2@user…]sudo resize2fs  /dev/xvda1 /* gives nothing do because it has 100gib.
 ```
 #### 2.SSL on Elastic Load Balancer
 - SSL Certificates can be taxing on an instance and can cause performance issues with spikes in traffic.To remedy that by applying the SSL certificate to the Elastic Load Balancer instead.
