@@ -391,7 +391,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - EC2—>launch an linux instance—>configure instance details—>No. of instances “2”—>Auto-assign Public IP—>Enable & leave remaining as it is—> SG with HTTP & SSH inbound custom rules—>download pem file—>name the created 2 instances.
 - Select one running instance & connect to it through ssh.
 ```ssh
-[ec2@user…]$ sudo yum  - -enablerepo=epel  install iperf  iperf3 /*to install iperf3
+[ec2@user…]$sudo yum --enablerepo=epel install iperf iperf3 /*to install iperf3
 [ec2@user…]$ sudo iperf3  -s  -p 80  /* for server listening on port 80
 ```
 - open another terminal window,
