@@ -370,10 +370,10 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 [ec2@user…]sudo  resize2fs  /dev/xvda1 /* gives nothing do because it has 100gib.
 ```
 #### 2.SSL on Elastic Load Balancer
-SSL Certificates can be taxing on an instance and can cause performance issues with spikes in traffic.To remedy that by applying the SSL certificate to the Elastic Load Balancer instead.
-EC2—>Load Balancers—>create load balancer with default VPC—>HTTP & HTTPS protocol with “HTTP” protocol for both—>select a new SG with name & description, Type 2 “Custom TCP Rule”,Port Range “80 & 443” with “Anywhere” source—> Configure security settings—>select upload cert to IAM for 3rd party certificates with name,public key & private keys of certificate—>create.
+- SSL Certificates can be taxing on an instance and can cause performance issues with spikes in traffic.To remedy that by applying the SSL certificate to the Elastic Load Balancer instead.
+- EC2—>Load Balancers—>create load balancer with default VPC—>HTTP & HTTPS protocol with “HTTP” protocol for both—>select a new SG with name & description, Type 2 “Custom TCP Rule”,Port Range “80 & 443” with “Anywhere” source—>Configure security settings—>select upload cert to IAM for 3rd party certificates with name,public key & private keys of certificate—>create.
 
-3.Network Bottlenecks
+#### 3.Network Bottlenecks
 Potential Networking Issues
 -One of the primary network bottlenecks comes from EC2 instances
 -Potential causes for bottlenecks
