@@ -353,13 +353,13 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 
 ### Identify Performance Bottlenecks and Implement Remedies
 #### 1.Resizing or Changing EBS Root Volume
--To change vol size or vol type to provision iops. First backup the information by creating a snapshot.
-EC2 Dashboard—>Volumes—>Select volume which attached to running instance—> Actions—>create snapshot by giving name & description.
--Check the created snapshot by going to EC2—>Snapshots.
--To create bigger vol or different type of volumes with provisioned iops by using the created snapshot
-EC2—>snapshots—>select created snapshot—>Actions—>Create Volume with vol type “general purpose SSD”, size “100”, Availability Zone same as snapshot’s.
--Now we have to attach this vol to an running instance, but problem is  we want it to be a root vol instead of  being extra attached vol.so we want to replace the smaller vol with this larger vol.i.e., we are going to have some downtime because we have to stop the instance to replace the vols.
--EC2 instance—>select running instance—>stop
+- To change vol size or vol type to provision iops. First backup the information by creating a snapshot.
+- EC2 Dashboard—>Volumes—>Select volume which attached to running instance—> Actions—>create snapshot by giving name & description.
+- Check the created snapshot by going to EC2—>Snapshots.
+- To create bigger vol or different type of volumes with provisioned iops by using the created snapshot
+- EC2—>snapshots—>select created snapshot—>Actions—>Create Volume with vol type “general purpose SSD”, size “100”, Availability Zone same as snapshot’s.
+- Now we have to attach this vol to an running instance, but problem is  we want it to be a root vol instead of  being extra attached vol.so we want to replace the smaller vol with this larger vol.i.e., we are going to have some downtime because we have to stop the instance to replace the vols.
+- EC2 instance—>select running instance—>stop
 -EC2—>Volumes—>select the smaller size vol—>detach it by going to actions—> select bigger volume size—>Actions—>Attach Vol—>select running Instance—> device—>/dev/xvda(which is same as instance root instance)—>attach.
 -EC2 instance—>restart—>Connect & ssh into it by going to CLI.
 [ec2@user…]lsbk     /*shows Root devices details with mount point.
