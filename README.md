@@ -475,15 +475,15 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
     - Apps are deployed to the app layer through a source code repo like Git,SVN or even S3
     - We can deploy an app against a layer & have OpsWorks execute recipes to prepare instances for the application.
 #### AWS OpsWorks -Recipes
--Recipes:
-    -Created using the Ruby lang & based off of the Chef deployment software
-    -Custom recipes can customize different layers in an app
-    -Recipes are run at certain pre-defined events within a stack
-        -Setup  they : occurs on a new instance after first boot
-        -Configure : occurs on all stack instances when they enter or leave the online state
-        -Deploy : occurs when we deploy an app
-        -Undeploy : happens when we delete an app from a set of app instances
-        -Shutdown : happens when we shut down an instance(but before it is actually stopped)
+- Recipes:
+    - Created using the Ruby lang & based off of the Chef deployment software
+    - Custom recipes can customize different layers in an app
+    - Recipes are run at certain pre-defined events within a stack
+        - Setup  : occurs on a new instance after first boot
+        - Configure : occurs on all stack instances when they enter or leave the online state
+        - Deploy : occurs when we deploy an app
+        - Undeploy : happens when we delete an app from a set of app instances
+        - Shutdown : happens when we shut down an instance(but before it is actually stopped)
 #### 2.OpsWorks: Creating our First Stack
 - AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
 - Next Add a Layer—>layer type—>php app server—>add layer
