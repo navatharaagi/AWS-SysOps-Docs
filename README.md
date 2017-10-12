@@ -449,7 +449,7 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 ### Deployment & Provisioning
 #### Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
 #### 1.OpsWorks: Overview
--OpsWorks gives us a flexible way to create & manage resources for our applications,as well as the applications themselves.
+- OpsWorks gives us a flexible way to create & manage resources for our applications,as well as the applications themselves.
 -we can create a Stack of resources & manage those resources collectively in different layers.These layers can have built-in Chef recipes.
 -we can use OpsWorks to:
     -Automate deployments
@@ -483,7 +483,7 @@ AWS OpsWorks -Recipes
         -Configure : occurs on all stack instances when they enter or leave the online state
         -Deploy : occurs when we deploy an app
         -Undeploy : happens when we delete an app from a set of app instances
-        -Shutdown : happens when we shut down an instance(but before it is actually stopped) 
+        -Shutdown : happens when we shut down an instance(but before it is actually stopped)
 #### 2.OpsWorks: Creating our First Stack
 - AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
 - Next Add a Layer—>layer type—>php app server—>add layer
