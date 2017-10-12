@@ -431,7 +431,7 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 ```
 - This way we can backup the data even instances are terminated.
 
-2.Troubleshooting Auto Scaling Issues
+#### 2.Troubleshooting Auto Scaling Issues
 -Attempting to use the wrong subnet
 -Availability is no longer available or supported
 -Security group does not exist
