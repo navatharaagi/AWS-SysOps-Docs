@@ -501,3 +501,32 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - Now go back to OpsWorks—>layers—>ELB—>it should work.
 
 #### 3.CloudFormation: Essentials
+Amazon CloudFormation
+-CloudFormation allows to create & provision resources in a reusable template fashion
+-CloudFormation turns our resources into stacks that work as units
+-CloudFormation allows us to source control our infrastructure
+-Templates are JSON compatible
+Anatomy of a CloudFormation Template
+-Templates can have 8 main sections
+    -AWSTemplateFormatVersion
+    -Description
+    -Metadata : JSON objects that provide details about the template
+    -Parameters
+    -Mappings
+    -Conditions
+    -Resources
+    -Outputs
+Intrinsic Functions
+-Used to pass in values that are not available until run time
+-Fn::GetAtt
+-Fn::FindInMap - returns the value of a key from a specified mapping
+-Fn::Join - Concatenates elements, separated by a specified delimiter
+-Ref - return a resource or value based on a logical name or parameter
+-Fn::GetAZs - get Availability Zones for a specified region
+-Fn::Select - returns a single object from a list of objects by index
+CloudFormation Rollback
+-If a stack fails to create a resource, by default the stack will rollback
+-Rollback - removal of all created resources after a failed stack creation, or after canceling creation
+-Rollback can be disabled from the API
+-CloudFormation templates allow us to declare cloud-init scripts for EC2 resources
+-CloudFormation templates allows the use of regular expressions in certain declarations.
