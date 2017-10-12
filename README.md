@@ -465,4 +465,4 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - EC2—>ELB—>SG—>Inbound—>Edit—>source—>0.0.0.0/0—>save.
 - Now go back to Opsworks—>layers—>ELB—>it will work.
 
-3.CloudFormation: Essentials
+#### 3.CloudFormation: Essentials
