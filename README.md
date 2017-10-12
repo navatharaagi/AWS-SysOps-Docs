@@ -382,14 +382,14 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
     - Not using enhanced networking features
   - We can check network performance with `iperf3`
     - [https://github.com/esnet/iperf]
--VPCs can use VPC Peering to create a reliable connection
-    -No single point of failure for communication or bandwidth bottlenecks
+  - VPCs can use VPC Peering to create a reliable connection
+    - No single point of failure for communication or bandwidth bottlenecks
 1. Create two EC2 instances on AWS
 2. Install iperf3 to each instance
 3. Start the iperf3 server on one instance
 4. Run an iperf3 test from the other instance
--EC2—>launch an linux instance—>configure instance details—>No. of instances “2”—>Auto-assign Public IP—>Enable & leave remaining as it is—> SG with HTTP & SSH inbound custom rules—>download pem file—>name the created 2 instances.
--Select one running instance & connect to it through ssh.
+- EC2—>launch an linux instance—>configure instance details—>No. of instances “2”—>Auto-assign Public IP—>Enable & leave remaining as it is—> SG with HTTP & SSH inbound custom rules—>download pem file—>name the created 2 instances.
+- Select one running instance & connect to it through ssh.
 [ec2@user…]$ sudo yum  - -enablerepo=epel  install iperf  iperf3 /*to install iperf3
 [ec2@user…]$ sudo iperf3  -s  -p 80  /* for server listening on port 80
 -open another terminal window,
