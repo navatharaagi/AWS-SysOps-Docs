@@ -407,3 +407,54 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 
 #### Identify Potential Issues on a Given Application Deployment
 #### 1.EBS Root Devices on Terminated Instances - Ensuring Data Durability
+-Create an Linux AWS EC2 instance & delete to check its volume.
+$aws  ec2  run-instances  - -image-id=“ami=paste linux  AMI”  - - instance-type "t2.micro”  - -profile  “la”  - -region  ‘us-east-1’  /*instance will be created & running
+-EC2—>Volumes—>check there will be root vol in “available” state & "in use" vol which is attached to running instance.
+OR
+-we can launch instance through AWS Console,just uncheck the “Delete on Termination” in Add Storage Tab before launching an instance to not to delete Root Volume on termination  
+-Copy Instance ID
+$ aws  ec2  terminate-instances  - -instance-ids=“paste instance id”  - -profile  “la”  - -region “us-east-1”   /* to terminate instance
+-After instance termination,attached “in use” vol will also be terminated.But Root vol will not be deleted.
+-To backup data, we can create a snapshot from volume before deleting. Anytime after deletion of a volume, we can create a volume from created snapshot
+-if we run the instance command again,
+$aws  ec2  run-instances  - -image-id=“ami=paste linux  AMI”  - - instance-type "t2.micro”  - -profile  “la”  - -region  ‘us-east-1’ /*instance will be created with default 8Gib volume
+-Now we have Root vol & default vol, just attach the Root vol to running instance by going to Actions.
+-Now copy the new instance id of  running one.
+$ aws  ec2  terminate-instances  - -instance-ids=“paste instance id”  - -profile  “la”  - -region “us-east-1” /*terminate instance with 8Gib vol but not Root vol.
+-This way we can backup the data even instances are terminated.
+
+2.Troubleshooting Auto Scaling Issues
+-Attempting to use the wrong subnet
+-Availability is no longer available or supported
+-Security group does not exist
+-Key pair associated does not exist
+-Auto Scaling configuration is not working correctly
+-Instance type specification is not supported in that Availability Zone
+-Auto Scaling service is not enabled on the account
+-Invalid EBS device mapping
+-Attempting to attach EBS block device to instance-store AMI
+-AMI issues
+-Placement group attempting to use m1.large (wrong instance type)
+-“We currently do not have sufficient instance capacity in the AZ that you requested”
+-Updating instance in Auto Scaling group with “suspended state”
+
+Deployment & Provisioning
+Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
+1.OpsWorks: Overview
+2.OpsWorks: Creating our First Stack
+AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
+Next Add a Layer—>layer type—>php app server—>add layer
+-we can check Settings,Recipes,Networks,etc,…of a added layer
+Add another layer—>layer type—>Ganglia—>add layer
+We can add instances to created layers,
+Add instance—>size—>t2.micro—>Advanced—>leave as it is—>Add instance—> start.
+-While starting the instance, create an ELB in EC2
+EC2—>load balancer—>Classic load balancer—>name—>default vpc—>select an existing SG—>select default vpc SG—>health check—>TCP,80—>create
+-OpsWorks—>layers—>settings—>Network—>select ELB which created above—> shut down instance without w8ing for connections to drain—>save
+-OpsWorks—>Apps—>Add App—>Name—>type vl get by default—> data source “none”—>Repo type “git”—>Repo URL ”https://github.com/pinehead/opsworks-sysops.git” —>Add App—>Deploy—>command—>select Deploy—>Advanced—> instances—>select “PHP APP server” layer & its instance—>deploy.
+-Click on instance we can see logs,public IP,… Goto Public IP,it should work,pulls php page.
+-Opsworks—>layers—>ELB—>it will not work,so check SG of ELB by going into EC2
+-EC2—>ELB—>SG—>Inbound—>Edit—>source—>0.0.0.0/0—>save.
+-Now go back to Opsworks—>layers—>ELB—>it will work.
+
+3.CloudFormation: Essentials
