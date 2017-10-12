@@ -450,19 +450,19 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 #### Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
 #### 1.OpsWorks: Overview
 #### 2.OpsWorks: Creating our First Stack
-AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
-Next Add a Layer—>layer type—>php app server—>add layer
--we can check Settings,Recipes,Networks,etc,…of a added layer
-Add another layer—>layer type—>Ganglia—>add layer
-We can add instances to created layers,
-Add instance—>size—>t2.micro—>Advanced—>leave as it is—>Add instance—> start.
--While starting the instance, create an ELB in EC2
-EC2—>load balancer—>Classic load balancer—>name—>default vpc—>select an existing SG—>select default vpc SG—>health check—>TCP,80—>create
--OpsWorks—>layers—>settings—>Network—>select ELB which created above—> shut down instance without w8ing for connections to drain—>save
--OpsWorks—>Apps—>Add App—>Name—>type vl get by default—> data source “none”—>Repo type “git”—>Repo URL ”https://github.com/pinehead/opsworks-sysops.git” —>Add App—>Deploy—>command—>select Deploy—>Advanced—> instances—>select “PHP APP server” layer & its instance—>deploy.
--Click on instance we can see logs,public IP,… Goto Public IP,it should work,pulls php page.
--Opsworks—>layers—>ELB—>it will not work,so check SG of ELB by going into EC2
--EC2—>ELB—>SG—>Inbound—>Edit—>source—>0.0.0.0/0—>save.
--Now go back to Opsworks—>layers—>ELB—>it will work.
+- AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
+- Next Add a Layer—>layer type—>php app server—>add layer
+- we can check Settings,Recipes,Networks,etc,…of a added layer
+- Add another layer—>layer type—>Ganglia—>add layer
+- We can add instances to created layers,
+- Add instance—>size—>t2.micro—>Advanced—>leave as it is—>Add instance—> start.
+- While starting the instance, create an ELB in EC2
+- EC2—>load balancer—>Classic load balancer—>name—>default vpc—>select an existing SG—>select default vpc SG—>health check—>TCP,80—>create
+- OpsWorks—>layers—>settings—>Network—>select ELB which created above—> shut down instance without w8ing for connections to drain—>save
+- OpsWorks—>Apps—>Add App—>Name—>type vl get by default—> data source “none”—>Repo type “git”—>Repo URL `https://github.com/pinehead/opsworks-sysops.git`—>Add App—>Deploy—> command—>select Deploy—>Advanced—> instances—>select “PHP APP server” layer & its instance—>deploy.
+- Click on instance we can see logs,public IP,… Goto Public IP,it should work,pulls php page.
+- Opsworks—>layers—>ELB—>it will not work,so check SG of ELB by going into EC2
+- EC2—>ELB—>SG—>Inbound—>Edit—>source—>0.0.0.0/0—>save.
+- Now go back to Opsworks—>layers—>ELB—>it will work.
 
 3.CloudFormation: Essentials
