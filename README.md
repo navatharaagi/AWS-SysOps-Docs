@@ -462,15 +462,15 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - This is a useful tool for longer application life-cycles.
 #### AWS OpsWorks - Anatomy
 - Stacks:
-    - Represent a set of resources that we want to manage as a group. eg: EC2 instances,EBS vol,load balancers
+    - Represent a set of resources that we want to manage as a group. Eg: EC2 instances,EBS vol,load balancers
     - We could build a stack for a development,staging or product environment
 - Layers:
-    - Used to represent & configure components of a stack. eg: A layer for web app servers, a layer for the DB, & a layer for the load balancer
+    - Used to represent & configure components of a stack. Eg: A layer for web app servers, a layer for the DB, & a layer for the load balancer
     - we can use built-in layers & customize those or create completely custom layers
     - Recipes are added to layers.
--Instances:
-    -Must be associated with atleast one layer
-    -can run as : 24/7, Load-based, Time-based
+- Instances:
+    - Must be associated with atleast one layer
+    - can run as : 24/7, Load-based, Time-based
 -Apps:
     -Apps are deployed to the app layer through a source code repo like Git,SVN or even S3
     -We can deploy an app against a layer & have OpsWorks execute recipes to prepare instances for the application.
