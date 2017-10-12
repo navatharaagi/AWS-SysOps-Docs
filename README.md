@@ -411,11 +411,13 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 ```ssh
 $aws  ec2  run-instances  - -image-id=“ami=paste linux  AMI”  - - instance-type "t2.micro”  - -profile  “la”  - -region  ‘us-east-1’  /*instance will be created & running
 ```
--EC2—>Volumes—>check there will be root vol in “available” state & "in use" vol which is attached to running instance.
+- EC2—>Volumes—>check there will be root vol in “available” state & "in use" vol which is attached to running instance.
 OR
--we can launch instance through AWS Console,just uncheck the “Delete on Termination” in Add Storage Tab before launching an instance to not to delete Root Volume on termination  
--Copy Instance ID
+- we can launch instance through AWS Console,just uncheck the “Delete on Termination” in Add Storage Tab before launching an instance to not to delete Root Volume on termination  
+- Copy Instance ID
+```ssh
 $ aws  ec2  terminate-instances  - -instance-ids=“paste instance id”  - -profile  “la”  - -region “us-east-1”   /* to terminate instance
+```
 -After instance termination,attached “in use” vol will also be terminated.But Root vol will not be deleted.
 -To backup data, we can create a snapshot from volume before deleting. Anytime after deletion of a volume, we can create a volume from created snapshot
 -if we run the instance command again,
