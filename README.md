@@ -450,8 +450,8 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 #### Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
 #### 1.OpsWorks: Overview
 - OpsWorks gives us a flexible way to create & manage resources for our applications,as well as the applications themselves.
--we can create a Stack of resources & manage those resources collectively in different layers.These layers can have built-in Chef recipes.
--we can use OpsWorks to:
+- we can create a Stack of resources & manage those resources collectively in different layers.These layers can have built-in Chef recipes.
+- we can use OpsWorks to:
     -Automate deployments
     -Monitor deployments
     -Maintain deployments
