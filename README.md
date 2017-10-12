@@ -429,7 +429,7 @@ $aws  ec2  run-instances  - -image-id=“ami=paste linux  AMI”  - - instance-t
 ```ssh
 $ aws  ec2  terminate-instances  - -instance-ids=“paste instance id”  - -profile  “la”  - -region “us-east-1” /*terminate instance with 8Gib vol but not Root vol.
 ```
--This way we can backup the data even instances are terminated.
+- This way we can backup the data even instances are terminated.
 
 2.Troubleshooting Auto Scaling Issues
 -Attempting to use the wrong subnet
