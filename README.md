@@ -374,9 +374,9 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - EC2—>Load Balancers—>create load balancer with default VPC—>HTTP & HTTPS protocol with “HTTP” protocol for both—>select a new SG with name & description, Type 2 “Custom TCP Rule”,Port Range “80 & 443” with “Anywhere” source—>Configure security settings—>select upload cert to IAM for 3rd party certificates with name,public key & private keys of certificate—>create.
 
 #### 3.Network Bottlenecks
-Potential Networking Issues
--One of the primary network bottlenecks comes from EC2 instances
--Potential causes for bottlenecks
+- Potential Networking Issues
+  - One of the primary network bottlenecks comes from EC2 instances
+  - Potential causes for bottlenecks
     -Instances are in different Availability Zones, regions, or continents
     -EC2 instance sizes (larger instances generally have better bandwidth performance)
     -Not using enhanced networking features
