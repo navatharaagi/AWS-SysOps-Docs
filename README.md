@@ -449,6 +449,41 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 ### Deployment & Provisioning
 #### Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
 #### 1.OpsWorks: Overview
+-OpsWorks gives us a flexible way to create & manage resources for our applications,as well as the applications themselves.
+-we can create a Stack of resources & manage those resources collectively in different layers.These layers can have built-in Chef recipes.
+-we can use OpsWorks to:
+    -Automate deployments
+    -Monitor deployments
+    -Maintain deployments
+AWS OpsWorks
+-OpsWorks removes a lot of leg work associated with creating & maintaining application in AWS
+-OpsWorks provides abstraction from the underlying infrastructure while still giving plenty of control.Infact, OpsWorks can give us more customization than Elastic Beanstalk.
+-It uses Chef which is an open source tool that automates infrastructure by turning it into code.This means we can create custom recipes to dictate what our infrastructure & configurations should look like.
+-This is a useful tool for longer application life-cycles.
+AWS OpsWorks - Anatomy
+-Stacks:
+    -Represent a set of resources that we want to manage as a group. eg: EC2 instances,EBS vol,load balancers
+    -We could build a stack for a development,staging or product environment
+-Layers:
+    -Used to represent & configure components of a stack. eg: A layer for web app servers, a layer for the DB, & a layer for the load balancer
+    -we can use built-in layers & customize those or create completely custom layers
+    -Recipes are added to layers.
+-Instances:
+    -Must be associated with atleast one layer
+    -can run as : 24/7, Load-based, Time-based
+-Apps:
+    -Apps are deployed to the app layer through a source code repo like Git,SVN or even S3
+    -We can deploy an app against a layer & have OpsWorks execute recipes to prepare instances for the application.
+AWS OpsWorks -Recipes
+-Recipes:
+    -Created using the Ruby lang & based off of the Chef deployment software
+    -Custom recipes can customize different layers in an app
+    -Recipes are run at certain pre-defined events within a stack
+        -Setup  they : occurs on a new instance after first boot
+        -Configure : occurs on all stack instances when they enter or leave the online state
+        -Deploy : occurs when we deploy an app
+        -Undeploy : happens when we delete an app from a set of app instances
+        -Shutdown : happens when we shut down an instance(but before it is actually stopped) 
 #### 2.OpsWorks: Creating our First Stack
 - AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
 - Next Add a Layer—>layer type—>php app server—>add layer
