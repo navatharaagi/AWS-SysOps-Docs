@@ -364,7 +364,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - EC2 instance—>restart—>Connect & ssh into it by going to CLI.
 ```ssh
 [ec2@user…]lsbk     /*shows Root devices details with mount point.
-[ec2@user…]df  -h   /*to get more info
+[ec2@user…]df -h   /*to get more info
 [ec2@user…]sudo file -s /dev/xvda
 [ec2@user…]sudo file -s /dev/xvda1
 [ec2@user…]sudo  resize2fs  /dev/xvda1 /* gives nothing do because it has 100gib.
