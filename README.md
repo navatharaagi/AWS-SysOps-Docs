@@ -432,21 +432,21 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - This way we can backup the data even instances are terminated.
 
 #### 2.Troubleshooting Auto Scaling Issues
--Attempting to use the wrong subnet
--Availability is no longer available or supported
--Security group does not exist
--Key pair associated does not exist
--Auto Scaling configuration is not working correctly
--Instance type specification is not supported in that Availability Zone
--Auto Scaling service is not enabled on the account
--Invalid EBS device mapping
--Attempting to attach EBS block device to instance-store AMI
--AMI issues
--Placement group attempting to use m1.large (wrong instance type)
--“We currently do not have sufficient instance capacity in the AZ that you requested”
--Updating instance in Auto Scaling group with “suspended state”
+- Attempting to use the wrong subnet
+- Availability is no longer available or supported
+- Security group does not exist
+- Key pair associated does not exist
+- Auto Scaling configuration is not working correctly
+- Instance type specification is not supported in that Availability Zone
+- Auto Scaling service is not enabled on the account
+- Invalid EBS device mapping
+- Attempting to attach EBS block device to instance-store AMI
+- AMI issues
+- Placement group attempting to use m1.large (wrong instance type)
+- “We currently do not have sufficient instance capacity in the AZ that you requested”
+- Updating instance in Auto Scaling group with “suspended state”
 
-Deployment & Provisioning
+### Deployment & Provisioning
 Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
 1.OpsWorks: Overview
 2.OpsWorks: Creating our First Stack
