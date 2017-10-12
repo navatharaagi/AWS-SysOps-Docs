@@ -463,6 +463,6 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - Click on instance we can see logs,public IP,… Goto Public IP,it should work,pulls php page.
 - Opsworks—>layers—>ELB—>it will not work,so check SG of ELB by going into EC2
 - EC2—>ELB—>SG—>Inbound—>Edit—>source—>0.0.0.0/0—>save.
-- Now go back to Opsworks—>layers—>ELB—>it will work.
+- Now go back to Opsworks—>layers—>ELB—>it should work.
 
 #### 3.CloudFormation: Essentials
