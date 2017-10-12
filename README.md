@@ -377,11 +377,11 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Potential Networking Issues
   - One of the primary network bottlenecks comes from EC2 instances
   - Potential causes for bottlenecks
-    -Instances are in different Availability Zones, regions, or continents
-    -EC2 instance sizes (larger instances generally have better bandwidth performance)
-    -Not using enhanced networking features
--We can check network performance with “iperf3"
-    - https://github.com/esnet/iperf
+    - Instances are in different Availability Zones, regions, or continents
+    - EC2 instance sizes (larger instances generally have better bandwidth performance)
+    - Not using enhanced networking features
+  - We can check network performance with `iperf3`
+    - [https://github.com/esnet/iperf]
 -VPCs can use VPC Peering to create a reliable connection
     -No single point of failure for communication or bandwidth bottlenecks
 1. Create two EC2 instances on AWS
