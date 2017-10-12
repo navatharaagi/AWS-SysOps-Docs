@@ -447,7 +447,7 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - Updating instance in Auto Scaling group with “suspended state”
 
 ### Deployment & Provisioning
-Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
+#### Demonstrate the Ability to Provision Cloud Resources and Manage Implementation Automation
 1.OpsWorks: Overview
 2.OpsWorks: Creating our First Stack
 AWS Console—>OpsWorks—>Goto OpsWorks Stacks—>Stacks—>Add ur First Stack—>Chef 11 Stack—>Give Name,leave remaining as it is default options—> Advanced—>leave as it is,default—>Add stack.
