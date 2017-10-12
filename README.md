@@ -427,7 +427,7 @@ $aws ec2 run-instances --image-id=“ami=paste linux AMI” --instance-type "t2.
 - Now we have Root vol & default vol, just attach the Root vol to running instance by going to Actions.
 - Now copy the new instance id of  running one.
 ```ssh
-$ aws  ec2  terminate-instances  - -instance-ids=“paste instance id”  - -profile  “la”  - -region “us-east-1” /*terminate instance with 8Gib vol but not Root vol.
+$aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  “la” --region “us-east-1” /*terminate instance with 8Gib vol but not Root vol.
 ```
 - This way we can backup the data even instances are terminated.
 
