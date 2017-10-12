@@ -416,7 +416,7 @@ OR
 - we can launch instance through AWS Console,just uncheck the “Delete on Termination” in Add Storage Tab before launching an instance to not to delete Root Volume on termination  
 - Copy Instance ID
 ```ssh
-$ aws  ec2  terminate-instances  - -instance-ids=“paste instance id”  - -profile  “la”  - -region “us-east-1”   /* to terminate instance
+$aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  “la” --region “us-east-1”   /* to terminate instance
 ```
 - After instance termination,attached “in use” vol will also be terminated.But Root vol will not be deleted.
 - To backup data, we can create a snapshot from volume before deleting. Anytime after deletion of a volume, we can create a volume from created snapshot
