@@ -456,8 +456,8 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
     - Monitor deployments
     - Maintain deployments
 #### AWS OpsWorks
--OpsWorks removes a lot of leg work associated with creating & maintaining application in AWS
--OpsWorks provides abstraction from the underlying infrastructure while still giving plenty of control.Infact, OpsWorks can give us more customization than Elastic Beanstalk.
+- OpsWorks removes a lot of leg work associated with creating & maintaining application in AWS
+- OpsWorks provides abstraction from the underlying infrastructure while still giving plenty of control.Infact, OpsWorks can give us more customization than Elastic Beanstalk.
 -It uses Chef which is an open source tool that automates infrastructure by turning it into code.This means we can create custom recipes to dictate what our infrastructure & configurations should look like.
 -This is a useful tool for longer application life-cycles.
 AWS OpsWorks - Anatomy
