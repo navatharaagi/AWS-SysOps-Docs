@@ -352,7 +352,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 - Initialize (pre-warm) the volume by reading from every single block.
 
 ### Identify Performance Bottlenecks and Implement Remedies
-1.Resizing or Changing EBS Root Volume
+#### 1.Resizing or Changing EBS Root Volume
 -To change vol size or vol type to provision iops. First backup the information by creating a snapshot.
 EC2 Dashboard—>Volumes—>Select volume which attached to running instance—> Actions—>create snapshot by giving name & description.
 -Check the created snapshot by going to EC2—>Snapshots.
