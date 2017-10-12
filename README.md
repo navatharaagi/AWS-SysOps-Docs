@@ -405,5 +405,5 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 ```
 - Using a VPN to access our AWS VPC from our on-premise network means we have to communicate over the open Internet,for that We can use `AWS Direct Connect`
 
-Identify Potential Issues on a Given Application Deployment
-1.EBS Root Devices on Terminated Instances - Ensuring Data Durability
+### Identify Potential Issues on a Given Application Deployment
+#### 1.EBS Root Devices on Terminated Instances - Ensuring Data Durability
