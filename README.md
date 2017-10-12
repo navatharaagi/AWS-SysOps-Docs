@@ -422,7 +422,7 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - To backup data, we can create a snapshot from volume before deleting. Anytime after deletion of a volume, we can create a volume from created snapshot
 - if we run the instance command again,
 ```ssh
-$aws  ec2  run-instances  - -image-id=“ami=paste linux  AMI”  - - instance-type "t2.micro”  - -profile  “la”  - -region  ‘us-east-1’ /*instance will be created with default 8Gib volume
+$aws ec2 run-instances --image-id=“ami=paste linux AMI” --instance-type "t2.micro” --profile “la” --region ‘us-east-1’ /*instance will be created with default 8Gib volume
 ```
 - Now we have Root vol & default vol, just attach the Root vol to running instance by going to Actions.
 - Now copy the new instance id of  running one.
