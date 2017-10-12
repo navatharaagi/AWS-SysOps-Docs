@@ -403,7 +403,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 ```ssh
 [ec2@user…]$ sudo iperf3  -c  <paste copied public ip>  -i 1  -t 10 -p 80 /*[ for connection on port 80  “i”-interval of 1sec, “t”- total time of 10 sec]
 ```
--Using a VPN to access our AWS VPC from our on-premise network means we have to communicate over the open Internet,for that We can use AWS Direct Connect
+- Using a VPN to access our AWS VPC from our on-premise network means we have to communicate over the open Internet,for that We can use `AWS Direct Connect`
 
 Identify Potential Issues on a Given Application Deployment
 1.EBS Root Devices on Terminated Instances - Ensuring Data Durability
