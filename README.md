@@ -461,7 +461,7 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - It uses `Chef` which is an open source tool that automates infrastructure by turning it into code.This means we can create custom recipes to dictate what our infrastructure & configurations should look like.
 - This is a useful tool for longer application life-cycles.
 AWS OpsWorks - Anatomy
--Stacks:
+- Stacks:
     -Represent a set of resources that we want to manage as a group. eg: EC2 instances,EBS vol,load balancers
     -We could build a stack for a development,staging or product environment
 -Layers:
