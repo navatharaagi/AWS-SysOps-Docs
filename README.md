@@ -471,10 +471,10 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - Instances:
     - Must be associated with atleast one layer
     - can run as : 24/7, Load-based, Time-based
--Apps:
-    -Apps are deployed to the app layer through a source code repo like Git,SVN or even S3
-    -We can deploy an app against a layer & have OpsWorks execute recipes to prepare instances for the application.
-AWS OpsWorks -Recipes
+- Apps:
+    - Apps are deployed to the app layer through a source code repo like Git,SVN or even S3
+    - We can deploy an app against a layer & have OpsWorks execute recipes to prepare instances for the application.
+#### AWS OpsWorks -Recipes
 -Recipes:
     -Created using the Ruby lang & based off of the Chef deployment software
     -Custom recipes can customize different layers in an app
