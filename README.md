@@ -407,7 +407,7 @@ $ssh into EC2 instance by using “connect” option which gives ssh command
 
 #### Identify Potential Issues on a Given Application Deployment
 #### 1.EBS Root Devices on Terminated Instances - Ensuring Data Durability
--Create an Linux AWS EC2 instance & delete to check its volume.
+- Create an Linux AWS EC2 instance & delete to check its volume.
 $aws  ec2  run-instances  - -image-id=“ami=paste linux  AMI”  - - instance-type "t2.micro”  - -profile  “la”  - -region  ‘us-east-1’  /*instance will be created & running
 -EC2—>Volumes—>check there will be root vol in “available” state & "in use" vol which is attached to running instance.
 OR
