@@ -465,9 +465,9 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
     - Represent a set of resources that we want to manage as a group. eg: EC2 instances,EBS vol,load balancers
     - We could build a stack for a development,staging or product environment
 - Layers:
-    -Used to represent & configure components of a stack. eg: A layer for web app servers, a layer for the DB, & a layer for the load balancer
-    -we can use built-in layers & customize those or create completely custom layers
-    -Recipes are added to layers.
+    - Used to represent & configure components of a stack. eg: A layer for web app servers, a layer for the DB, & a layer for the load balancer
+    - we can use built-in layers & customize those or create completely custom layers
+    - Recipes are added to layers.
 -Instances:
     -Must be associated with atleast one layer
     -can run as : 24/7, Load-based, Time-based
