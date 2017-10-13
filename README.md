@@ -561,5 +561,6 @@ aws_secret_access_key= copy & paste from credentials file
 region= us-east-1
 :wq!
 ```
+```ssh
 [ec2@….]$which python  /*to check where python is,copy the path
 [ec2@….]$vim example.py
