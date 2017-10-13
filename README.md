@@ -538,8 +538,8 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 https://linuxacademy.com/cp/guides/download/refsheets/guides/refsheets/backup-scripts_1470172879.zip
 - AWS—>EC2—>launch an instance
 - AWS—>IAM—>Users—>Create user—>name “snapshot"—>select generate keys—> create—> download credentials file.
-select created user “snapshot”—>permissions—>snapshotEBS(customized policy)—> attach.
-AWS—>EC2—>select launched instance—>Connect into it through SSH
+- select created user “snapshot”—>permissions—>snapshotEBS(customized policy)—> attach.
+- AWS—>EC2—>select launched instance—>Connect into it through SSH
 [ec2@….]$sudo yum update
 [ec2@….]$sudo yum install python-pip
 [ec2@….]$sudo pip install boto3
