@@ -530,3 +530,34 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - Rollback can be disabled from the API
 - CloudFormation templates allow us to declare cloud-init scripts for EC2 resources
 - CloudFormation templates allows the use of regular expressions in certain declarations.
+### Data Management
+Demonstrate Ability to Create Backups for Different Services
+1.Backup Services on AWS and Services that Include Backups
+2.Creating and Scripting Automation for EC2 Snapshots
+Backup Python Scripts link:
+https://linuxacademy.com/cp/guides/download/refsheets/guides/refsheets/backup-scripts_1470172879.zip
+AWS—>EC2—>launch an instance
+AWS—>IAM—>Users—>Create user—>name “snapshot"—>select generate keys—> create—> download credentials file.
+select created user “snapshot”—>permissions—>snapshotEBS(customized policy)—> attach.
+AWS—>EC2—>select launched instance—>Connect into it through SSH
+[ec2@….]$sudo yum update
+[ec2@….]$sudo yum install python-pip
+[ec2@….]$sudo pip install boto3
+
+To configure AWS
+[ec2@….]$aws configure
+Access key & secret key:  copy & paste from credentials file
+region: us-east-1
+OR
+[ec2@….]$vim ~/.aws/credentials
+[default]
+aws_access_key_id=  copy & paste from credentials file
+aws_secret_access_key= copy & paste from credentials file
+:wq!
+[ec2@….]$vim ~/.aws/config
+[default]
+region= us-east-1
+:wq!
+
+[ec2@….]$which python  /*to check where python is,copy the path
+[ec2@….]$vim example.py
