@@ -540,10 +540,11 @@ https://linuxacademy.com/cp/guides/download/refsheets/guides/refsheets/backup-sc
 - AWS—>IAM—>Users—>Create user—>name “snapshot"—>select generate keys—> create—> download credentials file.
 - select created user “snapshot”—>permissions—>snapshotEBS(customized policy)—> attach.
 - AWS—>EC2—>select launched instance—>Connect into it through SSH
+```ssh
 [ec2@….]$sudo yum update
 [ec2@….]$sudo yum install python-pip
 [ec2@….]$sudo pip install boto3
-
+```
 To configure AWS
 [ec2@….]$aws configure
 Access key & secret key:  copy & paste from credentials file
