@@ -574,6 +574,10 @@ for volume in ec2.volumes.all():
     description = "backup-%s" %(vol_id)
     ec2.create_snapshot(VolumeId=vol_id, Description=description)
 :wq!
-[ec2@….]$ ./example.py   /*AWS backups should start & complete
-[ec2@….]$ sudo pip install pytz  /* “pytz” packageto get the track vols time & creation
+[[ec2@….]$chmod u+x example.py
+[ec2@….]$ ./example.py
 ```
+- Goto EC2—>sanpshots will be created. Now delete those snapshots.
+
+```ssh
+[ec2@….]$ vim example.py
