@@ -534,10 +534,10 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 #### Demonstrate Ability to Create Backups for Different Services
 #### 1.Backup Services on AWS and Services that Include Backups
 #### 2.Creating and Scripting Automation for EC2 Snapshots
-Backup Python Scripts link:
+- Backup Python Scripts link:
 https://linuxacademy.com/cp/guides/download/refsheets/guides/refsheets/backup-scripts_1470172879.zip
-AWS—>EC2—>launch an instance
-AWS—>IAM—>Users—>Create user—>name “snapshot"—>select generate keys—> create—> download credentials file.
+- AWS—>EC2—>launch an instance
+- AWS—>IAM—>Users—>Create user—>name “snapshot"—>select generate keys—> create—> download credentials file.
 select created user “snapshot”—>permissions—>snapshotEBS(customized policy)—> attach.
 AWS—>EC2—>select launched instance—>Connect into it through SSH
 [ec2@….]$sudo yum update
