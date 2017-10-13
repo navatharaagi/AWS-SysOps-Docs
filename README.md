@@ -564,3 +564,16 @@ region= us-east-1
 ```ssh
 [ec2@….]$which python  /*to check where python is,copy the path
 [ec2@….]$vim example.py
+#!/usr/bin/python
+import boto3
+
+ec2 = boto3.resource('ec2')
+
+for volume in ec2.volumes.all():
+    vol_id = volume.id
+    description = "backup-%s" %(vol_id)
+    ec2.create_snapshot(VolumeId=vol_id, Description=description)
+:wq!
+[ec2@….]$ ./example.py   /*AWS backups should start & complete
+[ec2@….]$ sudo pip install pytz  /* “pytz” packageto get the track vols time & creation
+```
