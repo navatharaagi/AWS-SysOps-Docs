@@ -532,8 +532,8 @@ $aws ec2 terminate-instances --instance-ids=“paste instance id” --profile  �
 - CloudFormation templates allows the use of regular expressions in certain declarations.
 ### Data Management
 #### Demonstrate Ability to Create Backups for Different Services
-1. Backup Services on AWS and Services that Include Backups
-2. Creating and Scripting Automation for EC2 Snapshots
+#### 1.Backup Services on AWS and Services that Include Backups
+#### 2.Creating and Scripting Automation for EC2 Snapshots
 Backup Python Scripts link:
 https://linuxacademy.com/cp/guides/download/refsheets/guides/refsheets/backup-scripts_1470172879.zip
 AWS—>EC2—>launch an instance
