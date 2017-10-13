@@ -546,6 +546,7 @@ https://linuxacademy.com/cp/guides/download/refsheets/guides/refsheets/backup-sc
 [ec2@….]$sudo pip install boto3
 ```
 To configure AWS
+```ssh
 [ec2@….]$aws configure
 Access key & secret key:  copy & paste from credentials file
 region: us-east-1
@@ -559,6 +560,6 @@ aws_secret_access_key= copy & paste from credentials file
 [default]
 region= us-east-1
 :wq!
-
+```
 [ec2@….]$which python  /*to check where python is,copy the path
 [ec2@….]$vim example.py
